@@ -1,0 +1,46 @@
+<ion-list margin-bottom class="edit">
+    <ion-item class ="modify">
+        <ion-button icon-left color="light">
+           <!-- <ion-icon name="photos"></ion-icon>-->
+            {{ 'app.label.insertavatar' | translate }}
+        </ion-button>
+    </ion-item>
+
+    <ion-list-header color="light">
+        <ion-label class="fw700">{{ 'app.label.userdata' | translate }}</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+        <ion-label color="dark" position="stacked">{{ 'app.label.fullname' | translate }}:</ion-label>
+        <ion-input inputmode="text" placeholder="Ex: Giuseppe Maffia"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label color="dark" position="stacked">{{ 'app.label.email' | translate }}:</ion-label>
+        <ion-input inputmode="email" placeholder="Ex: gmaffia@gmail.com"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label color="dark" position="stacked">{{ 'app.label.address' | translate }}:</ion-label>
+        <ion-input inputmode="text" placeholder="Ex: Via Troia"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label color="dark" position="stacked">{{ 'app.label.phone' | translate }}:</ion-label>
+        <ion-input inputmode="text" placeholder="Ex:3256485120"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label color="dark">{{ 'app.label.city' | translate }}</ion-label>
+        <ion-select>
+            <ion-select-option *ngFor="let city of cities" [value]="city">{{city.value}}</ion-select-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label color="dark">{{ 'app.label.state' | translate }}</ion-label>
+        <ion-select>
+            <ion-select-option *ngFor="let state of states" [value]="state">{{state.value}}</ion-select-option>
+        </ion-select>
+    </ion-item>
+</ion-list>

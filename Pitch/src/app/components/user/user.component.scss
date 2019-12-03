@@ -1,0 +1,28 @@
+  .edit {
+    img {
+          height: 128px;
+          width: 128px;
+          border-radius: 50%;
+          // margin-top: -100px;
+          border: solid 4px #fff;
+          display: inline;
+          box-shadow: 0 0 28px rgba(255,255,255, .65);
+        }
+  
+    ion-item {
+      ion-input {
+        border-bottom: 1px solid var(--ion-color-tertiary);
+      }
+    }
+  
+    ion-buttons {
+      button {
+        margin: 0;
+      }
+    }
+  }
+  .modify{    
+    margin-left: 25%;
+    margin-bottom: 5%;
+  }
+  

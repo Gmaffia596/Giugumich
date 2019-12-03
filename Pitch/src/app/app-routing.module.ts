@@ -3,11 +3,14 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)}
+  { path: 'home', loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)},
   ///////////////////////////////////////
-  /*{ path: 'edit-profile', loadChildren: () => import('./pages/edit-profile/edit-profile.module').then(m => m.EditProfilePageModule) },
+  { path: 'edit-profile', loadChildren: () => import('./pages/edit-profile/edit-profile.module').then(m => m.EditProfilePageModule) },
   { path: 'settings', loadChildren: () => import('./pages/settings/settings.module').then(m => m.SettingsPageModule) },
-  { path: 'hotel-list', loadChildren: () => import('./pages/hotel-list/hotel-list.module').then(m => m.HotelListPageModule) },
+  { path: 'messages', loadChildren: () => import('./pages/messages/messages.module').then(m => m.MessagesPageModule) },
+  { path: 'authentication', loadChildren:
+  () => import('./pages/authentication/authentication.module').then(m => m.AuthenticationPageModule) },
+  /*{ path: 'hotel-list', loadChildren: () => import('./pages/hotel-list/hotel-list.module').then(m => m.HotelListPageModule) },
   { path: 'hotel-detail/:id', loadChildren: () => import('./pages/hotel-detail/hotel-detail.module').then(m => m.HotelDetailPageModule) },
   { path: 'hotel-checkout/:hotelID/:roomID', loadChildren:
   () => import('./pages/hotel-checkout/hotel-checkout.module').then(m => m.HotelCheckoutPageModule) },
@@ -16,7 +19,6 @@ const routes: Routes = [
   { path: 'local-weather', loadChildren: () => import('./pages/local-weather/local-weather.module').then(m => m.LocalWeatherPageModule) },
   { path: 'about', loadChildren: () => import('./pages/about/about.module').then(m => m.AboutPageModule) },
   { path: 'support', loadChildren: () => import('./pages/support/support.module').then(m => m.SupportPageModule) },
-  { path: 'messages', loadChildren: () => import('./pages/messages/messages.module').then(m => m.MessagesPageModule) },
   { path: 'message/:id', loadChildren: () => import('./pages/message/message.module').then(m => m.MessagePageModule) },
   { path: 'rentcar', loadChildren: () => import('./pages/rentcar/rentcar.module').then(m => m.RentcarPageModule) },
   { path: 'cars-list', loadChildren: () => import('./pages/cars-list/cars-list.module').then(m => m.CarsListPageModule) },
@@ -31,8 +33,7 @@ const routes: Routes = [
   { path: 'activity-checkout/:tripID', loadChildren:
   () => import('./pages/activity-checkout/activity-checkout.module').then(m => m.ActivityCheckoutPageModule) },
   { path: 'extras', loadChildren: () => import('./pages/extras/extras.module').then(m => m.ExtrasPageModule) },
-  { path: 'authentication', loadChildren:
-  () => import('./pages/extras/authentication/authentication.module').then(m => m.AuthenticationPageModule) },*/
+  */
 ];
 
 @NgModule({

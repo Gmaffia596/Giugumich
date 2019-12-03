@@ -15,8 +15,7 @@ export class HomePage {
   searchQuery = '';
   items: string[];
   showItems = false;
-  rooms: any;
-  adults: any;
+  adults: number;
 
   childs: any = 0;
   children: number;

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ 'app.pages.about.title.header' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="animated fadeIn">
+
+  <div class="bg-profile" text-center padding>
+    <img src="assets/img/ionbooking-ico.png">
+  </div>
+
+  <ion-card class="bg-white" no-margin>
+    <ion-card-content>
+      <h1 margin-bottom>
+        <ion-text color="primary"><strong>Pitch</strong></ion-text>
+      </h1>
+      
+      <p margin-bottom>{{'app.pages.about.description' | translate}}</p>
+      
+      <p>{{'app.pages.about.description' | translate}}</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

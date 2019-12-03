@@ -51,11 +51,10 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    /*                                                  vedere per cosa è questa api, forse è Google Maps
+      // api di Google Maps
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyD9BxeSvt3u--Oj-_GD-qG2nPr1uODrR0Y'
     }),
-    */
    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [

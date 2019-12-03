@@ -19,10 +19,10 @@ import { AgmCoreModule } from '@agm/core';
         component: HomePage
       }
     ]),
-    TranslateModule.forChild()
-   /* AgmCoreModule.forRoot({
+    TranslateModule.forChild(),
+    AgmCoreModule.forRoot({
       apiKey: 'AIzaSyD9BxeSvt3u--Oj-_GD-qG2nPr1uODrR0Y'
-    })*/
+    })
   ],
   declarations: [HomePage]
 })

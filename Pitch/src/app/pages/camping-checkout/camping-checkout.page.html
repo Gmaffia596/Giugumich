@@ -3,17 +3,17 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ 'app.pages.hotelcheckout.title.header' | translate }}</ion-title>
+    <ion-title>{{ 'app.pages.campingcheckout.title.header' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="animated fadeIn">
 
-    <ion-card no-margin class="hotelCard">
-      <ion-img [src]="hotel.thumb"></ion-img>
+    <ion-card no-margin class="campingCard">
+      <ion-img [src]="camping.thumb"></ion-img>
     
       <ion-card-title color="light">
-        <strong>{{ hotel.name }}</strong>
+        <strong>{{ camping.name }}</strong>
       </ion-card-title>
       <ion-card-subtitle color="light">
         {{ dateFrom | date: 'MMM dd, yyyy'}} - {{ dateTo | date: 'MMM dd, yyyy'}}
@@ -168,7 +168,7 @@
             </ion-row>
             <ion-row>
               <ion-col>
-                <ion-button margin-top size="large" shape="round" expand="full" color="dark" (click)="makeBooking(hotel)">
+                <ion-button margin-top size="large" shape="round" expand="full" color="dark" (click)="makeBooking(camping)">
                   <ion-icon slot="start" name="card"></ion-icon>
                   {{ 'app.button.checkout' | translate }} ({{ room.price + 4 | currency:'$':'code' }})
                 </ion-button>
@@ -199,7 +199,7 @@
             </ion-row>
             <ion-row>
               <ion-col>
-                <ion-button margin-top size="large" shape="round" expand="full" color="dark" (click)="makeBooking(hotel)">
+                <ion-button margin-top size="large" shape="round" expand="full" color="dark" (click)="makeBooking(camping)">
                   <ion-icon slot="start" name="wallet"></ion-icon>
                   {{ 'app.button.checkout' | translate }} ({{ room.price + 4 | currency:'$':'code' }})
                 </ion-button>

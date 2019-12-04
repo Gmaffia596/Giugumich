@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ 'app.pages.camperdetail.title.header' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="animated fadeIn">
+  <div class="bg-profile" text-center>
+    <img [src]="campershop.thumb">
+  </div>
+
+  <ion-camperd no-margin class="animated fadeIn">
+    <ion-camperd-content class="bg-white">
+      <h1>
+        <ion-text color="primary">
+          <strong>{{campershop.name}}</strong>
+        </ion-text>
+      </h1>
+      <h3>
+        <ion-text color="primary">{{ campershop.slogan }}</ion-text>
+      </h3>
+      <hr>
+      <p>{{campershop.address}}</p>
+    </ion-card-content>
+    <ion-item color="primary">
+      <ion-label>
+        {{ 'app.label.averageprice' | translate }}:
+      </ion-label>
+      <ion-badge slot="end" color="success">
+        {{ campershop.price | currency }}
+      </ion-badge>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="bg-white" *ngFor="let camper of campershop.campers">
+    <ion-img [src]="camper.thumb"></ion-img>
+  
+    <ion-card-content>
+  
+      <ion-card-subtitle>
+        <ion-text color="secondary">{{ 'app.label.daily' | translate }} {{ camper.price | currency }}</ion-text>
+      </ion-card-subtitle>
+  
+      <ion-card-title>
+        <ion-text color="primary">{{camper.name}}</ion-text>
+      </ion-card-title>
+  
+      <p>
+        <ion-text color="primary">
+          <ion-icon name="person" color="dark"></ion-icon>
+          <span margin-right>{{ camper.passengers }} {{ 'app.label.passengers' | translate }}</span>
+        </ion-text>
+      </p>
+      <p>
+        <ion-text color="primary">
+          <ion-icon name="camper" color="dark"></ion-icon>
+          {{ camper.doors }} {{ 'app.label.doors' | translate }}
+        </ion-text>
+      </p>
+      <p>
+        <ion-text color="primary">
+          <ion-icon name="checkmark" color="success"></ion-icon>
+          <span ion-text color="dark" *ngIf="camper.automatic_transmission">{{ 'app.pages.camperdetail.label.autotransmission' | translate }}</span>
+          <span ion-text color="dark" *ngIf="!camper.automatic_transmission">{{ 'app.pages.camperdetail.label.manualtransmission' | translate }}</span>
+        </ion-text>
+      </p>
+      <ion-button shape="round" expand="full" color="dark" (click)="checkout(campershop.id, camper.id)">
+        <ion-icon slot="start" name="camper"></ion-icon>
+        {{ 'app.label.reserve' | translate }} ({{ camper.price * 3 | currency }})
+      </ion-button>
+    </ion-card-content>
+  
+  </ion-card>
+
+</ion-content>

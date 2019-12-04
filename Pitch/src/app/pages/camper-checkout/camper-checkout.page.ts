@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, ToastController, LoadingController } from '@ionic/angular';
-import { TranslateProvider, CarsService } from '../../providers';
+import { TranslateProvider, CampersService } from '../../providers';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-car-checkout',
-  templateUrl: './car-checkout.page.html',
-  styleUrls: ['./car-checkout.page.scss'],
+  selector: 'app-camper-checkout',
+  templateUrl: './camper-checkout.page.html',
+  styleUrls: ['./camper-checkout.page.scss'],
 })
-export class CarCheckoutPage implements OnInit {
-  carshop: any;
-  carshopID: String;
-  car: any;
-  carID: any;
+export class CamperCheckoutPage implements OnInit {
+  campershop: any;
+  campershopID: String;
+  camper: any;
+  camperID: any;
   paymethods: String = 'creditcard';
   // number of nights
   public days = 3;
@@ -27,12 +27,12 @@ export class CarCheckoutPage implements OnInit {
     public loadingCtrl: LoadingController,
     private translate: TranslateProvider,
     private route: ActivatedRoute,
-    public cars: CarsService
+    public campers: CampersService
   ) {
-    this.carshopID = this.route.snapshot.paramMap.get('carshopID');
-    this.carID = this.route.snapshot.paramMap.get('carID');
-    this.carshop = this.cars.getItem(this.carshopID);
-    this.car = this.cars.getCar(this.carshopID, this.carID);
+    this.campershopID = this.route.snapshot.paramMap.get('campershopID');
+    this.camperID = this.route.snapshot.paramMap.get('camperID');
+    this.campershop = this.campers.getItem(this.campershopID);
+    this.camper = this.campers.getCamper(this.campershopID, this.camperID);
   }
 
   ngOnInit() {
@@ -54,7 +54,7 @@ export class CarCheckoutPage implements OnInit {
       const toast = await this.toastCtrl.create({
         showCloseButton: false,
         cssClass: 'bg-profile',
-        message: 'your Car was successfuly Rent!',
+        message: 'your Camper was successfuly Rent!',
         duration: 3000,
         position: 'bottom'
       });

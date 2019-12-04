@@ -3,12 +3,12 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ 'app.pages.hotellist.title.header' | translate }}</ion-title>
+    <ion-title>{{ 'app.pages.campinglist.title.header' | translate }}</ion-title>
   </ion-toolbar>
 
   <ion-toolbar color="dark">
     <ion-title>
-      <h6 no-margin>({{ hotels?.length || '0' }}) {{ 'app.label.resultsf' | translate }}</h6>
+      <h6 no-margin>({{ campings?.length || '0' }}) {{ 'app.label.resultsf' | translate }}</h6>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -17,7 +17,7 @@
 
   <div padding>
 
-    <ion-segment [(ngModel)]="hotelLists" (ionChange)="segmentChanged($event)" color="light" margin-bottom>
+    <ion-segment [(ngModel)]="campingLists" (ionChange)="segmentChanged($event)" color="light" margin-bottom>
       <ion-segment-button value="cardlist">
         <ion-icon name="apps" color="tertiary"></ion-icon>
       </ion-segment-button>
@@ -29,48 +29,48 @@
       </ion-segment-button>
     </ion-segment>
 
-    <div [ngSwitch]="hotelLists">
-      <div *ngSwitchCase="'cardlist'" [@staggerIn]='hotels?.length'>
+    <div [ngSwitch]="campingLists">
+      <div *ngSwitchCase="'cardlist'" [@staggerIn]='campings?.length'>
         <!-- # -->
-        <ion-card no-margin margin-bottom class="hotelsCard" tappable routerLink="/hotel-detail/{{hotel.id}}" *ngFor="let hotel of hotels; let i = index">
-          <ion-img [src]="hotel.thumb"></ion-img>
+        <ion-card no-margin margin-bottom class="campingsCard" tappable routerLink="/camping-detail/{{camping.id}}" *ngFor="let camping of campings; let i = index">
+          <ion-img [src]="camping.thumb"></ion-img>
         
           <ion-card-subtitle>
             <ion-badge color="warning">
-              <ion-icon name="star"></ion-icon> {{ hotel.rating }}
+              <ion-icon name="star"></ion-icon> {{ camping.rating }}
             </ion-badge>
           </ion-card-subtitle>
-          <ion-card-title color="light">{{ hotel.name }}</ion-card-title>
+          <ion-card-title color="light">{{ camping.name }}</ion-card-title>
           <div class="shadow"></div>
           <ion-card-content>
             <ion-badge slot="start" color="dark" class="rooms">
               <ion-icon name="book" color="secondary"></ion-icon>
-              {{ hotel.numb_available_rooms }} {{ 'app.label.availrooms' | translate }}
+              {{ camping.numb_available_rooms }} {{ 'app.label.availrooms' | translate }}
             </ion-badge>
         
             <ion-badge slot="end" color="success" class="price">
-              <h3><strong>{{ hotel.price | currency:'$':'code' }}</strong></h3>
+              <h3><strong>{{ camping.price | currency:'$':'code' }}</strong></h3>
             </ion-badge>
           </ion-card-content>
         </ion-card>
         <!-- # -->
       </div>
-      <div *ngSwitchCase="'linelist'" [@staggerIn]='hotels.length'>
+      <div *ngSwitchCase="'linelist'" [@staggerIn]='campings.length'>
         <!-- # -->
-        <ion-item color="primary" tappable routerLink="/hotel-detail/{{hotel.id}}" margin-bottom *ngFor="let hotel of hotels; let i = index">
+        <ion-item color="primary" tappable routerLink="/camping-detail/{{camping.id}}" margin-bottom *ngFor="let camping of campings; let i = index">
           <ion-thumbnail slot="start">
-            <img [src]="hotel.thumb">
+            <img [src]="camping.thumb">
           </ion-thumbnail>
           <ion-label>
-            <h2><strong>{{ hotel.name }}</strong></h2>
+            <h2><strong>{{ camping.name }}</strong></h2>
             <h3>
               <ion-badge slot="start" color="secondary" class="rooms">
                 <ion-icon name="book" color="tertiary"></ion-icon>
-                {{ hotel.numb_available_rooms }} {{ 'app.label.availrooms' | translate }}
+                {{ camping.numb_available_rooms }} {{ 'app.label.availrooms' | translate }}
               </ion-badge>
             </h3>
             <ion-badge color="warning">
-              <ion-icon name="star"></ion-icon> {{ hotel.rating }}
+              <ion-icon name="star"></ion-icon> {{ camping.rating }}
             </ion-badge>
           </ion-label>
         </ion-item>
@@ -78,27 +78,27 @@
       </div>
       <div *ngSwitchCase="'maplist'">
         <!-- # -->
-        <agm-map [latitude]="hotels[0].location.lat" [longitude]="hotels[0].location.lon" [zoom]="10" [zoomControl]="false" [styles]="agmStyles"
+        <agm-map [latitude]="campings[0].location.lat" [longitude]="campings[0].location.lon" [zoom]="10" [zoomControl]="false" [styles]="agmStyles"
           [streetViewControl]="false">
-          <agm-marker *ngFor="let hotel of hotels" [latitude]="hotel.location.lat" [longitude]="hotel.location.lon">
+          <agm-marker *ngFor="let camping of campings" [latitude]="camping.location.lat" [longitude]="camping.location.lon">
             <agm-info-window>
-              <ion-item tappable routerLink="/hotel-detail/{{hotel.id}}">
+              <ion-item tappable routerLink="/camping-detail/{{camping.id}}">
                 <ion-thumbnail slot="start">
-                  <img [src]="hotel.thumb">
+                  <img [src]="camping.thumb">
                 </ion-thumbnail>
                 <ion-label>
                   <ion-text color="primary">
-                    <h2><strong>{{ hotel.name }}</strong></h2>
+                    <h2><strong>{{ camping.name }}</strong></h2>
                   </ion-text>
                   
                   <h3>
                     <ion-badge slot="start" color="secondary" class="rooms">
                       <ion-icon name="book" color="tertiary"></ion-icon>
-                      {{ hotel.numb_available_rooms }} {{ 'app.label.availrooms' | translate }}
+                      {{ camping.numb_available_rooms }} {{ 'app.label.availrooms' | translate }}
                     </ion-badge>
                   </h3>
                   <ion-badge color="warning">
-                    <ion-icon name="star"></ion-icon> {{ hotel.rating }}
+                    <ion-icon name="star"></ion-icon> {{ camping.rating }}
                   </ion-badge>
                 </ion-label>
               </ion-item>

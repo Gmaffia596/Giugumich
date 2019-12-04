@@ -30,7 +30,17 @@ export class CampingProvider {
             }
         }
     }
+    getRoom(campingID, roomID) {
+        const camping = this.getItem(campingID);
 
+        for (let i = 0; i < camping.rooms.length; i++) {
+            if (camping.rooms[i].id === parseInt(roomID)) {
+                return camping.rooms[i];
+            }
+        }
+
+        return null;
+    }
     remove(item) {
         this.campings.splice(this.campings.indexOf(item), 1);
     }

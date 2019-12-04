@@ -5,14 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 import { TranslateModule } from '@ngx-translate/core';
-import { AgmCoreModule } from '@agm/core';
 
-import { HotelDetailPage } from './hotel-detail.page';
+import { CamperCheckoutPage } from './camper-checkout.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: HotelDetailPage
+    component: CamperCheckoutPage
   }
 ];
 
@@ -21,12 +20,9 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes),
     TranslateModule.forChild(),
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyD9BxeSvt3u--Oj-_GD-qG2nPr1uODrR0Y'
-    })
+    RouterModule.forChild(routes)
   ],
-  declarations: [HotelDetailPage]
+  declarations: [CamperCheckoutPage]
 })
-export class HotelDetailPageModule {}
+export class CamperCheckoutPageModule {}

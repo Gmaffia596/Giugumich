@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { TranslateProvider, CarsService } from '../../providers';
+import { TranslateProvider, CampersService } from '../../providers';
 
 import {
   trigger,
@@ -12,9 +12,9 @@ import {
 } from '@angular/animations';
 
 @Component({
-  selector: 'app-cars-list',
-  templateUrl: './cars-list.page.html',
-  styleUrls: ['./cars-list.page.scss'],
+  selector: 'app-campers-list',
+  templateUrl: './campers-list.page.html',
+  styleUrls: ['./campers-list.page.scss'],
   animations: [
     trigger('staggerIn', [
       transition('* => *', [
@@ -24,18 +24,18 @@ import {
     ])
   ]
 })
-export class CarsListPage implements OnInit {
+export class CampersListPage implements OnInit {
   shops: any;
   numDays: number = 3;
 
   constructor(
     public navCtrl: NavController, 
-    public carsService: CarsService,
+    public campersService: CampersService,
     private translate: TranslateProvider
   ) { }
 
   ngOnInit() {
-    this.shops = this.carsService.getAll();
+    this.shops = this.campersService.getAll();
   }
 
 }

@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ 'app.pages.carlist.title.header' | translate }}</ion-title>
+    <ion-title>{{ 'app.pages.camperlist.title.header' | translate }}</ion-title>
   </ion-toolbar>
 
   <ion-toolbar color="dark">
@@ -16,7 +16,7 @@
 <ion-content padding class="animated fadeIn">
   <div [@staggerIn]='shops.length'>
     <!-- # -->
-    <ion-item color="primary" tappable routerLink="/car-detail/{{shop.id}}" margin-bottom *ngFor="let shop of shops">
+    <ion-item color="primary" tappable routerLink="/camper-detail/{{shop.id}}" margin-bottom *ngFor="let shop of shops">
       <ion-thumbnail slot="start">
         <img [src]="shop.thumb">
       </ion-thumbnail>

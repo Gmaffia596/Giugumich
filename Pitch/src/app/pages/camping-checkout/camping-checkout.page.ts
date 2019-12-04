@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, ToastController, LoadingController } from '@ionic/angular';
-import { TranslateProvider, HotelProvider } from '../../providers';
+import { TranslateProvider, CampingProvider } from '../../providers';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-hotel-checkout',
-  templateUrl: './hotel-checkout.page.html',
-  styleUrls: ['./hotel-checkout.page.scss'],
+  selector: 'app-camping-checkout',
+  templateUrl: './camping-checkout.page.html',
+  styleUrls: ['./camping-checkout.page.scss'],
 })
-export class HotelCheckoutPage implements OnInit {
-  hotel: any;
-  hotelID: string;
+export class CampingCheckoutPage implements OnInit {
+  camping: any;
+  campingID: string;
   room: any;
   roomID: any;
   paymethods: string = 'creditcard';
@@ -39,12 +39,12 @@ export class HotelCheckoutPage implements OnInit {
     public loadingCtrl: LoadingController,
     private translate: TranslateProvider,
     private route: ActivatedRoute,
-    public hotels: HotelProvider
+    public campings: CampingProvider
   ) {
-   this.hotelID = this.route.snapshot.paramMap.get('hotelID');
+   this.campingID = this.route.snapshot.paramMap.get('campingID');
    this.roomID = this.route.snapshot.paramMap.get('roomID');
-   this.hotel = this.hotels.getItem(this.hotelID);
-   this.room = this.hotels.getRoom(this.hotelID, this.roomID)
+   this.camping = this.campings.getItem(this.campingID);
+   this.room = this.campings.getRoom(this.campingID, this.roomID)
   }
 
   ngOnInit() {
@@ -69,7 +69,7 @@ export class HotelCheckoutPage implements OnInit {
 
       toast.present();
 
-      this.hotels.booking(this.hotel)
+      this.campings.booking(this.camping)
       .then(response => {
         setTimeout(() => {
           loader.dismiss();

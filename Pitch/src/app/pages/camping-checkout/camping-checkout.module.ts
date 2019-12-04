@@ -6,12 +6,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { RentcarPage } from './rentcar.page';
+import { CampingCheckoutPage } from './camping-checkout.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: RentcarPage
+    component: CampingCheckoutPage
   }
 ];
 
@@ -23,6 +23,6 @@ const routes: Routes = [
     TranslateModule.forChild(),
     RouterModule.forChild(routes)
   ],
-  declarations: [RentcarPage]
+  declarations: [CampingCheckoutPage]
 })
-export class RentcarPageModule {}
+export class CampingCheckoutPageModule {}

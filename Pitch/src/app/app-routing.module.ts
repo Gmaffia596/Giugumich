@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: 'favorites', loadChildren: () => import('./pages/favorites/favorites.module').then(m => m.FavoritesPageModule) },
   { path: 'local-weather', loadChildren: () => import('./pages/local-weather/local-weather.module').then(m => m.LocalWeatherPageModule) },
 
-  / path: 'camping-list', loadChildren: () => import('./pages/camping-list/camping-list.module').then(m => m.CampingListPageModule) },
+  { path: 'camping-list', loadChildren: () => import('./pages/camping-list/camping-list.module').then(m => m.CampingListPageModule) },
   { path: 'camping-detail/:id', loadChildren: () => import('./pages/camping-detail/camping-detail.module').then(m => m.CampingDetailPageModule) },
   { path: 'camping-checkout/:campingID/:roomID', loadChildren:
   () => import('./pages/camping-checkout/camping-checkout.module').then(m => m.CampingCheckoutPageModule) },

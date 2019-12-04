@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { TranslateProvider, HotelProvider } from '../../providers';
+import { TranslateProvider, CampingProvider } from '../../providers';
 
 import { environment } from '../../../environments/environment';
 
@@ -14,9 +14,9 @@ import {
 } from '@angular/animations';
 
 @Component({
-  selector: 'app-hotel-list',
-  templateUrl: './hotel-list.page.html',
-  styleUrls: ['./hotel-list.page.scss'],
+  selector: 'app-camping-list',
+  templateUrl: './camping-list.page.html',
+  styleUrls: ['./camping-list.page.scss'],
   animations: [
     trigger('staggerIn', [
       transition('* => *', [
@@ -26,17 +26,17 @@ import {
     ])
   ]
 })
-export class HotelListPage implements OnInit {
-  hotelLists: String = 'cardlist';
+export class CampingListPage implements OnInit {
+  campingLists: String = 'cardlist';
   agmStyles: any[] = environment.agmStyles;
-  hotels: any;
+  campings: any;
 
   constructor(
     public navCtrl: NavController,
     private translate: TranslateProvider,
-    public hotelService: HotelProvider
+    public campingService: CampingProvider
   ) {
-    this.hotels = this.hotelService.getAll();
+    this.campings = this.campingService.getAll();
   }
 
   ngOnInit() {

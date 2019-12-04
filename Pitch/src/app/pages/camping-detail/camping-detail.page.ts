@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, ActionSheetController, ToastController, ModalController } from '@ionic/angular';
-import { TranslateProvider, HotelProvider } from '../../providers';
+import { TranslateProvider, CampingProvider } from '../../providers';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { ImagePage } from './../modal/image/image.page';
-import { HotelCheckoutPage } from '../hotel-checkout/hotel-checkout.page'
+import { ImagePage } from '../modal/image/image.page';
+import { CampingCheckoutPage } from '../camping-checkout/camping-checkout.page'
 
 import { environment } from '../../../environments/environment'
 
@@ -18,9 +18,9 @@ import {
 } from '@angular/animations';
 
 @Component({
-  selector: 'app-hotel-detail',
-  templateUrl: './hotel-detail.page.html',
-  styleUrls: ['./hotel-detail.page.scss'],
+  selector: 'app-camping-detail',
+  templateUrl: './camping-detail.page.html',
+  styleUrls: ['./camping-detail.page.scss'],
   animations: [
     trigger('staggerIn', [
       transition('* => *', [
@@ -30,11 +30,11 @@ import {
     ])
   ]
 })
-export class HotelDetailPage implements OnInit {
-  hotel: any;
-  hotelID: any = this.route.snapshot.paramMap.get('id'); 
+export class CampingDetailPage implements OnInit {
+  camping: any;
+  campingID: any = this.route.snapshot.paramMap.get('id'); 
   agmStyles: any[] = environment.agmStyles;
-  hotelSegment: string = 'details';
+  campingSegment: string = 'details';
 
   constructor(
     public navCtrl: NavController,
@@ -42,20 +42,20 @@ export class HotelDetailPage implements OnInit {
     public toastCtrl: ToastController,
     public modalCtrl: ModalController,
     private translate: TranslateProvider,
-    public hotels: HotelProvider,
+    public campings: CampingProvider,
     public route: ActivatedRoute,
     public router: Router
   ) {
-    this.hotel = this.hotels.getItem(this.hotelID);
+    this.camping = this.campings.getItem(this.campingID);
   }
 
   ngOnInit() {
-    console.log(this.hotel)
+    console.log(this.camping)
   }
 
-  checkout(hotelID: number, roomID: number) {
-    this.navCtrl.navigateForward(`hotel-checkout/${hotelID}/${roomID}`);
-    // this.router.navigate(['../../hotel-checkout', { hotelID: hotelID, roomID: roomID }], { relativeTo: this.route });
+  checkout(campingID: number, roomID: number) {
+    this.navCtrl.navigateForward(`camping-checkout/${campingID}/${roomID}`);
+    // this.router.navigate(['../../camping-checkout', { campingID: campingID, roomID: roomID }], { relativeTo: this.route });
     // return await modal.present();
   }
 
@@ -67,13 +67,13 @@ export class HotelDetailPage implements OnInit {
     return await modal.present();
   }
 
-  async favorite(hotel) {
+  async favorite(camping) {
 
-    this.hotels.favorite(hotel)
+    this.campings.favorite(camping)
       .then(async property => {
         const toast = await this.toastCtrl.create({
           showCloseButton: true,
-          message: 'Hotel added on Favorites list.',
+          message: 'Camping added on Favorites list.',
           duration: 2000,
           position: 'bottom'
         });
@@ -84,7 +84,7 @@ export class HotelDetailPage implements OnInit {
 
   async share() {
     const actionSheet = await this.asCtrl.create({
-      header: 'Share Hotel:',
+      header: 'Share Camping:',
       buttons: [{
         text: 'Facebook',
         role: 'facebook',
@@ -129,11 +129,11 @@ export class HotelDetailPage implements OnInit {
   avgRating() {
     let average: number = 0;
 
-    this.hotel.reviews.forEach((val: any, key: any) => {
+    this.camping.reviews.forEach((val: any, key: any) => {
       average += val.rating;
     });
 
-    return average / this.hotel.reviews.length;
+    return average / this.camping.reviews.length;
   }
 
 }

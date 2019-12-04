@@ -3,13 +3,13 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{hotel.name}}</ion-title>
+    <ion-title>{{camping.name}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="animated fadeIn">
   <ion-slides pager="true" margin-bottom>
-    <ion-slide *ngFor="let image of hotel.images" (click)="presentImage(image)">
+    <ion-slide *ngFor="let image of camping.images" (click)="presentImage(image)">
       <img [src]="image">
       <div class="shadow"></div>
     </ion-slide>
@@ -17,7 +17,7 @@
 
   <div padding-horizontal>
 
-    <ion-segment [(ngModel)]="hotelSegment" color="primary">
+    <ion-segment [(ngModel)]="campingSegment" color="primary">
       <ion-segment-button value="details">
         <ion-label>{{ 'app.label.details' | translate }}</ion-label>
       </ion-segment-button>
@@ -29,14 +29,14 @@
       </ion-segment-button>
     </ion-segment>
     
-    <div [ngSwitch]="hotelSegment">
+    <div [ngSwitch]="campingSegment">
       <div *ngSwitchCase="'details'">
 
         <ion-card no-margin margin-top margin-bottom class="animated fadeIn">
           <ion-card-content no-padding>
-            <agm-map [latitude]="hotel.location.lat" [longitude]="hotel.location.lon" [zoom]="14" [zoomControl]="false" [styles]="agmStyles"
+            <agm-map [latitude]="camping.location.lat" [longitude]="camping.location.lon" [zoom]="14" [zoomControl]="false" [styles]="agmStyles"
               [streetViewControl]="false">
-              <agm-marker [latitude]="hotel.location.lat" [longitude]="hotel.location.lon"></agm-marker>
+              <agm-marker [latitude]="camping.location.lat" [longitude]="camping.location.lon"></agm-marker>
             </agm-map>
           </ion-card-content>
           <ion-card-content class="bg-white">
@@ -45,7 +45,7 @@
                 <strong>{{ 'app.label.address' | translate }}</strong>
               </ion-text>
             </h2>
-            <p>{{hotel.address}}</p>
+            <p>{{camping.address}}</p>
           </ion-card-content>
         </ion-card>
 
@@ -56,10 +56,10 @@
             </ion-card-title>
           
             <ion-text color="dark" margin-bottom>
-              <p>{{hotel.description}}</p>
+              <p>{{camping.description}}</p>
             </ion-text>
             <ion-text color="dark" margin-bottom>
-              <p>{{hotel.location_text}}</p>
+              <p>{{camping.location_text}}</p>
             </ion-text>
             
           </ion-card-content>
@@ -71,7 +71,7 @@
               <ion-text color="primary">{{ 'app.label.amenities' | translate }}</ion-text>
             </ion-card-title>
 
-            <ion-chip margin-left color="primary" *ngFor="let services of hotel.services">
+            <ion-chip margin-left color="primary" *ngFor="let services of camping.services">
               <ion-icon [name]="services.icon"></ion-icon>
               <ion-label>{{services.name}}</ion-label>
             </ion-chip>
@@ -85,23 +85,23 @@
             </ion-card-title>
         
             <ion-text color="dark">
-              <p>{{hotel.features}}</p>
+              <p>{{camping.features}}</p>
             </ion-text>
           </ion-card-content>
         </ion-card>
 
       </div>
 
-      <div *ngSwitchCase="'rooms'" [@staggerIn]='hotel.rooms.length'>
+      <div *ngSwitchCase="'rooms'" [@staggerIn]='camping.rooms.length'>
         <ion-card no-margin margin-vertical class="bg-profile animated fadeIn">
           <ion-card-content>
             <ion-text color="light">
-              <p>{{hotel.room_amenities}}</p>
+              <p>{{camping.room_amenities}}</p>
             </ion-text>
           </ion-card-content>
         </ion-card>
 
-        <ion-card no-margin margin-vertical class="bg-white" *ngFor="let room of hotel.rooms">
+        <ion-card no-margin margin-vertical class="bg-white" *ngFor="let room of camping.rooms">
           <ion-img [src]="room.thumb"></ion-img>
 
           <ion-card-content>
@@ -117,7 +117,7 @@
             <ion-badge slot="start" color="primary" margin-bottom>{{ room.numb_available_rooms }} {{ 'app.label.availrooms' | translate }}</ion-badge>
             <p><ion-text color="primary">{{room.room_info}}</ion-text></p>
             
-            <ion-button size="large" shape="round" expand="full" color="success" (click)="checkout(hotel.id, room.id)">
+            <ion-button size="large" shape="round" expand="full" color="success" (click)="checkout(camping.id, room.id)">
               <ion-icon slot="start" name="book"></ion-icon>
               {{ 'app.label.book' | translate }} ({{ room.price | currency:'$':'code' }})
             </ion-button>
@@ -152,7 +152,7 @@
                     </h1>
                     <h3>
                       <ion-text color="light">
-                        totally {{hotel.reviews.length}} people reviewed
+                        totally {{camping.reviews.length}} people reviewed
                       </ion-text>
                     </h3>
                   </ion-card-content>
@@ -161,7 +161,7 @@
          </ion-row>
        </ion-grid>
 
-        <ion-card *ngFor="let review of hotel.reviews" class="bg-white" no-margin margin-bottom>
+        <ion-card *ngFor="let review of camping.reviews" class="bg-white" no-margin margin-bottom>
           <ion-card-content>
             <h2>
               <ion-text color="primary">
@@ -195,7 +195,7 @@
       <ion-grid no-padding>
           <ion-row>
             <ion-col size="4" no-padding>
-              <ion-button size="small" shape="round" expand="full" fill="clear" color="tertiary" (click)="favorite(hotel)">
+              <ion-button size="small" shape="round" expand="full" fill="clear" color="tertiary" (click)="favorite(camping)">
                 <ion-icon slot="start" name="heart"></ion-icon>
                 {{ 'app.button.fav' | translate }}
               </ion-button>

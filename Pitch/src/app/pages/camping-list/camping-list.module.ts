@@ -5,13 +5,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 import { TranslateModule } from '@ngx-translate/core';
+import { AgmCoreModule } from '@agm/core';
 
-import { CarsListPage } from './cars-list.page';
+import { CampingListPage } from './camping-list.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: CarsListPage
+    component: CampingListPage
   }
 ];
 
@@ -20,9 +21,12 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    RouterModule.forChild(routes),
     TranslateModule.forChild(),
-    RouterModule.forChild(routes)
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD9BxeSvt3u--Oj-_GD-qG2nPr1uODrR0Y'
+    })
   ],
-  declarations: [CarsListPage]
+  declarations: [CampingListPage]
 })
-export class CarsListPageModule {}
+export class CampingListPageModule {}

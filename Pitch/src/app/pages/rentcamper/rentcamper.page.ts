@@ -6,11 +6,11 @@ import { Storage } from '@ionic/storage';
 import { LocationPage } from './../modal/location/location.page';
 
 @Component({
-  selector: 'app-rentcar',
-  templateUrl: './rentcar.page.html',
-  styleUrls: ['./rentcar.page.scss'],
+  selector: 'app-rentcamper',
+  templateUrl: './rentcamper.page.html',
+  styleUrls: ['./rentcamper.page.scss'],
 })
-export class RentcarPage implements OnInit {
+export class RentcamperPage implements OnInit {
   toppings: any;
   search: any = {
     pickup: 'Rio de Janeiro, Brazil',
@@ -60,6 +60,6 @@ export class RentcarPage implements OnInit {
   }
 
   doSearch() {
-    this.navCtrl.navigateForward('cars-list');
+    this.navCtrl.navigateForward('campers-list');
   }
 }

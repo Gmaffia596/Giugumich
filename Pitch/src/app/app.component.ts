@@ -52,8 +52,8 @@ export class AppComponent implements OnInit {
                 icon: 'heart'
             },
             {
-                title: 'Rent a Car',
-                url: '/rentcar',
+                title: 'Rent a Camper',
+                url: '/rentcamper',
                 direct: 'forward',
                 icon: 'car'
             },

@@ -20,8 +20,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { TranslateProvider } from './providers/translate/translate.service'; // add camping provider
 // Modal Pages            vedere a cosa servono
-// import { ImagePageModule } from './pages/modal/image/image.module';
-// import { LocationPageModule } from './pages/modal/location/location.module';
+import { ImagePageModule } from './pages/modal/image/image.module';
+import { LocationPageModule } from './pages/modal/location/location.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -36,14 +36,14 @@ export function HttpLoaderFactory(http: HttpClient) {
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
-   // ImagePageModule,
-   // LocationPageModule,
-    /*
-    ionicStorageModule.forRoot({
-      name:'_pitch',
-      driverOrder:['indexddb','sqlite','websql']
+    ImagePageModule,
+    LocationPageModule,
+
+    IonicStorageModule.forRoot({
+      name: 'pitch',
+      driverOrder: ['indexddb', 'sqlite', 'websql']
     }),
-    */
+
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

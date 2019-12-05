@@ -4,9 +4,9 @@ import { TranslateProvider, CampingProvider } from '../../providers';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { ImagePage } from '../modal/image/image.page';
-import { CampingCheckoutPage } from '../camping-checkout/camping-checkout.page'
+import { CampingCheckoutPage } from '../camping-checkout/camping-checkout.page';
 
-import { environment } from '../../../environments/environment'
+import { environment } from '../../../environments/environment';
 
 import {
   trigger,
@@ -32,9 +32,9 @@ import {
 })
 export class CampingDetailPage implements OnInit {
   camping: any;
-  campingID: any = this.route.snapshot.paramMap.get('id'); 
+  campingID: any = this.route.snapshot.paramMap.get('id');
   agmStyles: any[] = environment.agmStyles;
-  campingSegment: string = 'details';
+  campingSegment = 'details';
 
   constructor(
     public navCtrl: NavController,
@@ -50,7 +50,7 @@ export class CampingDetailPage implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.camping)
+    console.log(this.camping);
   }
 
   checkout(campingID: number, roomID: number) {
@@ -127,7 +127,7 @@ export class CampingDetailPage implements OnInit {
   }
 
   avgRating() {
-    let average: number = 0;
+    let average = 0;
 
     this.camping.reviews.forEach((val: any, key: any) => {
       average += val.rating;

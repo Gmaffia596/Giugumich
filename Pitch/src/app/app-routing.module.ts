@@ -17,6 +17,7 @@ const routes: Routes = [
   () => import('./pages/activity-detail/activity-detail.module').then(m => m.ActivityDetailPageModule) },
   { path: 'activity-checkout/:tripID', loadChildren:
   () => import('./pages/activity-checkout/activity-checkout.module').then(m => m.ActivityCheckoutPageModule) },
+  { path: 'image', loadChildren: () => import('./pages/modal/image/image.module').then(m => m.ImagePageModule) },
   { path: 'location', loadChildren: () => import('./pages/modal/location/location.module').then(m => m.LocationPageModule) },
   { path: 'support', loadChildren: () => import('./pages/support/support.module').then(m => m.SupportPageModule) },
   { path: 'booking-list', loadChildren: () => import('./pages/booking-list/booking-list.module').then(m => m.BookingListPageModule) },
@@ -24,14 +25,16 @@ const routes: Routes = [
   { path: 'local-weather', loadChildren: () => import('./pages/local-weather/local-weather.module').then(m => m.LocalWeatherPageModule) },
 
   { path: 'camping-list', loadChildren: () => import('./pages/camping-list/camping-list.module').then(m => m.CampingListPageModule) },
+  // tslint:disable-next-line: max-line-length
   { path: 'camping-detail/:id', loadChildren: () => import('./pages/camping-detail/camping-detail.module').then(m => m.CampingDetailPageModule) },
   { path: 'camping-checkout/:campingID/:roomID', loadChildren:
   () => import('./pages/camping-checkout/camping-checkout.module').then(m => m.CampingCheckoutPageModule) },
 
   { path: 'rentcamper', loadChildren: () => import('./pages/rentcamper/rentcamper.module').then(m => m.RentcamperPageModule) },
   { path: 'campers-list', loadChildren: () => import('./pages/campers-list/campers-list.module').then(m => m.CampersListPageModule) },
+  // tslint:disable-next-line: max-line-length
   { path: 'camper-detail/:id', loadChildren: () => import('./pages/camper-detail/camper-detail.module').then(m => m.CamperDetailPageModule) },
-  { path: 'camper-checkout/:campershopID/:carID', loadChildren:
+  { path: 'camper-checkout/:campershopID/:camperID', loadChildren:
   () => import('./pages/camper-checkout/camper-checkout.module').then(m => m.CamperCheckoutPageModule) }
 ];
 

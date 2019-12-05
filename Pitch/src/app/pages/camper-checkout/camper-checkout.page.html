@@ -146,7 +146,7 @@
           </ion-row>
           <ion-row>
             <ion-col>
-              <ion-button margin-top size="large" shape="round" expand="full" color="dark" (click)="makeBooking(hotel)">
+              <ion-button margin-top size="large" shape="round" expand="full" color="dark" (click)="makeBooking(camping)">
                 <ion-icon slot="start" name="card"></ion-icon>
                 {{ 'app.button.checkout' | translate }} ({{ camper.price + 4 | currency:'$':'code' }})
               </ion-button>
@@ -177,7 +177,7 @@
           </ion-row>
           <ion-row>
             <ion-col>
-              <ion-button margin-top size="large" shape="round" expand="full" color="dark" (click)="makeBooking(hotel)">
+              <ion-button margin-top size="large" shape="round" expand="full" color="dark" (click)="makeBooking(camping)">
                 <ion-icon slot="start" name="wallet"></ion-icon>
                 {{ 'app.button.checkout' | translate }} ({{ camper.price + 4 | currency:'$':'code' }})
               </ion-button>

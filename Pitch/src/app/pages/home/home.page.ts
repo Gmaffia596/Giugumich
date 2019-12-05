@@ -97,10 +97,17 @@ export class HomePage {
       this.navCtrl.navigateForward('edit-profile');
     }
 
-    settings() {
+    goToSettings() {
       this.navCtrl.navigateForward('settings');
     }
 
+    goToActivities() {
+      this.navCtrl.navigateForward('activities');
+    }
+
+    goToRentaCamper() {
+      this.navCtrl.navigateForward('rentcamper');
+    }
     logout() {
       this.navCtrl.navigateRoot('authentication');
     }

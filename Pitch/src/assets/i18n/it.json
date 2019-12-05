@@ -77,7 +77,7 @@
     "app.pages.menu.home": "Home",
     "app.pages.menu.booking": "Lista Prenotazioni",
     "app.pages.menu.favorites": "Preferiti",
-    "app.pages.menu.rentacar": "Affitta una Macchina",
+    "app.pages.menu.rentacamper": "Affitta un Camper",
     "app.pages.menu.activities": "Attività di viaggio",
     "app.pages.menu.activitiestab": "Attività",
     "app.pages.menu.logout": "Logout",
@@ -99,9 +99,9 @@
     "app.pages.home.label.pamenities": "Servizi Preferiti",
     "app.pages.home.label.availrooms": "Camere disponibili",
 
-    "app.pages.home.title.recommended": "Hotel in evidenza",
+    "app.pages.home.title.recommended": "Camping in evidenza",
     "app.pages.home.title.latestbookings": "Ultime Prenotazioni",
-    "app.pages.home.title.nearyou": "Hotel vicino a te",
+    "app.pages.home.title.nearyou": "Camping vicino a te",
 
     "app.pages.home.select.wifi":"Wifi",
     "app.pages.home.select.pool":"Piscina",
@@ -126,13 +126,13 @@
     "app.pages.bookinglist.title.header": "Lista prenotazioni",
     "app.pages.bookinglist.title.nores": "Non hai nessuna prenotazione ancora",
 
-    "app.pages.carcheckout.title.header": "Auto Checkout",
+    "app.pages.campercheckout.title.header": "Camper Checkout",
 
-    "app.pages.cardetail.title.header": "Dettaglio Negozio Auto",
-    "app.pages.cardetail.label.autotransmission": "Cambio automatico",
-    "app.pages.cardetail.label.manualtransmission": "Cambio manuale",
+    "app.pages.camperdetail.title.header": "Dettaglio Negozio Camper",
+    "app.pages.camperdetail.label.autotransmission": "Cambio automatico",
+    "app.pages.camperdetail.label.manualtransmission": "Cambio manuale",
 
-    "app.pages.carlist.title.header": "Lista Auto",
+    "app.pages.camperlist.title.header": "Lista Camper",
 
     "app.pages.editprofile.title.header": "Modifica Profilo",
     "app.pages.editprofile.avail.text": "Disponibile per chattare con gli agenti di viaggio?",
@@ -140,11 +140,11 @@
     "app.pages.editprofile.labelTA": "Agente di Viaggio",
 
     "app.pages.favorites.title.header": "Preferiti",
-    "app.pages.favorites.title.nores": "Non hai nessun hotel preferito.",
+    "app.pages.favorites.title.nores": "Non hai nessun camping preferito.",
 
-    "app.pages.hotelcheckout.title.header": "Checkout Hotel",
+    "app.pages.campingcheckout.title.header": "Checkout Camping",
 
-    "app.pages.hotellist.title.header": "Lista Hotel",
+    "app.pages.campinglist.title.header": "Lista Camping",
 
     "app.pages.localweather.title.header": "Meteo Locale",
     "app.pages.localweather.label.temp": "Temperatura",
@@ -185,5 +185,4 @@
     "app.pages.location": "Luogo",
     
     "app.pages.img": "Chiudi"
-
 }

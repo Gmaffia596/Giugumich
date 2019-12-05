@@ -77,7 +77,7 @@
     "app.pages.menu.home": "Home",
     "app.pages.menu.booking": "Booking List",
     "app.pages.menu.favorites": "Favorites",
-    "app.pages.menu.rentacar": "Rent a Car",
+    "app.pages.menu.rentacamper": "Rent a camper",
     "app.pages.menu.activities": "Trip Activities",
     "app.pages.menu.activitiestab": "Activities",
     "app.pages.menu.logout": "Logout",
@@ -99,9 +99,9 @@
     "app.pages.home.label.pamenities": "Preferred Amenities",
     "app.pages.home.label.availrooms": "Available rooms",
 
-    "app.pages.home.title.recommended": "Hotel in evidence",
+    "app.pages.home.title.recommended": "Camping in evidence",
     "app.pages.home.title.latestbookings": "Latest Bookings",
-    "app.pages.home.title.nearyou": "Hotels Near you",
+    "app.pages.home.title.nearyou": "Campings Near you",
 
 
     "app.pages.home.select.wifi":"Wifi",
@@ -127,13 +127,13 @@
     "app.pages.bookinglist.title.header": "Booking List",
     "app.pages.bookinglist.title.nores": "You have no bookings yet.",
 
-    "app.pages.carcheckout.title.header": "Car Checkout",
+    "app.pages.campercheckout.title.header": "Camper Checkout",
 
-    "app.pages.cardetail.title.header": "Car Shop Detail",
-    "app.pages.cardetail.label.autotransmission": "Automatic transmission",
-    "app.pages.cardetail.label.manualtransmission": "Manual transmission",
+    "app.pages.camperdetail.title.header": "Camper Shop Detail",
+    "app.pages.camperdetail.label.autotransmission": "Automatic transmission",
+    "app.pages.camperdetail.label.manualtransmission": "Manual transmission",
 
-    "app.pages.carlist.title.header": "Car List",
+    "app.pages.camperlist.title.header": "Camper List",
 
     "app.pages.editprofile.title.header": "Edit Profile",
     "app.pages.editprofile.avail.text": "Available to chat w/ Travel Agents?",
@@ -141,11 +141,11 @@
     "app.pages.editprofile.labelTA": "Travel Agent",
 
     "app.pages.favorites.title.header": "Favorites",
-    "app.pages.favorites.title.nores": "You have no favorite hotels.",
+    "app.pages.favorites.title.nores": "You have no favorite campings.",
 
-    "app.pages.hotelcheckout.title.header": "Hotel Checkout",
+    "app.pages.campingcheckout.title.header": "Camping Checkout",
 
-    "app.pages.hotellist.title.header": "Hotel List",
+    "app.pages.campinglist.title.header": "Camping List",
 
     "app.pages.localweather.title.header": "Local Weather",
     "app.pages.localweather.label.temp": "Temperature",
@@ -177,7 +177,7 @@
     "app.pages.settings.promotions": "Enable Promotions",
     "app.pages.settings.history": "Enable History",
     
-    "app.pages.rent.title": "Rent a car",
+    "app.pages.rent.title": "Rent a camper",
     "app.pages.rent.pick": "Pick-up",
     "app.pages.rent.drop": "Drop-off",
     "app.pages.rent.make": "Make",
@@ -186,6 +186,4 @@
     "app.pages.location": "Get Location",
 
     "app.pages.close": "Close"  
-
-    
 }

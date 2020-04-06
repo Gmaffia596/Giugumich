@@ -16,8 +16,6 @@ export class HomePage {
   items: string[];
   showItems = false;
   adults: number;
-
-  childs: any = 0;
   children: number;
   campinglocation: string;
 
@@ -44,10 +42,6 @@ export class HomePage {
     }
     ionViewWillEnter() {
       this.menuCtrl.enable(true);
-    }
-    childrenArr(chil) {
-      const child = Number(chil);
-      this.childs = Array(child).fill(0).map((v, i) => i);
     }
     initializeItems() {
       this.items = [

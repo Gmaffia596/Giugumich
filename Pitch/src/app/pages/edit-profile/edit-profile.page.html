@@ -10,24 +10,32 @@
 <ion-content class="profile">
   <ion-card no-margin>
     <ion-card-content class="bg-profile">
-      <img src="assets/img/avatar.jpeg">
+      <div>
+        <div class="cameraContainer">
+          <ion-icon class="changeImg" name="camera" ng-click="upload()"></ion-icon>
+        </div>
+      <img src="assets/img/avatar.jpeg" ng-click="upload()">
+      </div>
+        <!--<img src="assets/img/avatar.jpeg">-->
       <h1 class="fw500">Giuseppe Maffia</h1>
+      <ion-button *ngIf="Logged" icon-left size="small" shape="round" color="secondary" (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+        {{'app.pages.menu.logout' | translate }}
+      </ion-button>
+      <ion-button *ngIf="!Logged" icon-left size="small" shape="round" color="secondary" (click)="login()">
+        <ion-icon name="log-in"></ion-icon>
+        {{'app.pages.menu.login' | translate }}
+      </ion-button>
     </ion-card-content>
   
     <ion-grid fixed no-padding>
       <ion-row>
         <ion-col size="12" padding>
-
             <app-user></app-user>     
-  
         </ion-col>
       </ion-row>
     </ion-grid>
   
     <ion-button no-margin size="large" expand="full" color="dark" (click)="sendData()">{{ 'app.label.edit' | translate }}</ion-button>
   </ion-card>
-  
-  <div padding>
-    <ion-text color="dark" no-margin>{{'app.pages.about.description' | translate }}</ion-text>
-  </div>
 </ion-content>

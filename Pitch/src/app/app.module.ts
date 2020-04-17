@@ -18,6 +18,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 
+import { ChatService } from './providers/services/chatService/chat.service';
+import { PusherService } from './providers/services/pusherService/pusher.service';
 import { TranslateProvider } from './providers/translate/translate.service'; // add camping provider
 // Modal Pages            vedere a cosa servono
 import { ImagePageModule } from './pages/modal/image/image.module';
@@ -62,6 +64,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     TranslateProvider,
+    ChatService,
+    PusherService,
   ],
   bootstrap: [AppComponent]
 })

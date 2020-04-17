@@ -70,6 +70,18 @@ export class AppComponent implements OnInit {
                 icon: 'partly-sunny'
             },
             {
+                title: 'Chatbot',
+                url: '/chatbot',
+                direct: 'forward',
+                icon: 'chatbubbles'
+            },
+            {
+                title: 'Settings',
+                url: '/settings',
+                direct: 'forward',
+                icon: 'settings'
+            },
+            {
                 title: 'About',
                 url: '/about',
                 direct: 'forward',

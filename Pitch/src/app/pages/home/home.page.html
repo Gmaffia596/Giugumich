@@ -12,9 +12,12 @@
     </ion-title>
     <ion-buttons slot="end">
       <ion-button icon-left size="small" shape="round" color="tertiary" (click)="messages()">
-            <ion-icon name="mail"></ion-icon>
+	<ion-icon name="notifications"></ion-icon>
       </ion-button>
-      <ion-button icon-left size="small" shape="round" color="tertiary" (click)="editprofile()">
+      <ion-button icon-left size="small" shape="round" color="tertiary" (click)="goToSettings()">
+		 <ion-icon name="settings"></ion-icon>
+	  </ion-button>
+	  <ion-button icon-left size="small" shape="round" color="tertiary" (click)="editprofile()">
         <ion-icon name="contact"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -69,81 +72,27 @@
           <ion-col size="6" class="br bb bt" no-padding>
 
               <ion-item>
+				<ion-col>
                 <ion-label class="text-primary text08" no-padding>
                   <ion-text color="dark">{{ 'app.pages.home.label.adults' | translate }}</ion-text>
                 </ion-label>
-                <ion-select [(ngModel)]="adults" cancelText="Cancel" okText="OK" no-padding class="text1 text-dark">
-                  <ion-select-option value="1" selected="true">1</ion-select-option>
-                  <ion-select-option value="2">2</ion-select-option>
-                  <ion-select-option value="3">3</ion-select-option>
-                  <ion-select-option value="4">4</ion-select-option>
-                  <ion-select-option value="5">5</ion-select-option>
-                  <ion-select-option value="6">6</ion-select-option>
-                  <ion-select-option value="7">7</ion-select-option>
-                  <ion-select-option value="8">8</ion-select-option>
-                  <ion-select-option value="9">9</ion-select-option>
-                </ion-select>
+				</ion-col>
+              <ion-col text-right>
+                <ion-input [(ngModel)]="adults" inputmode="numeric"></ion-input>
+              </ion-col>
               </ion-item>
-
           </ion-col>
           <ion-col size="6" class="bb bt br" no-padding>
-
               <ion-item>
-                <ion-label class="text-primary text08" no-padding no-margin>
-                  <ion-text color="dark">{{ 'app.pages.home.label.children' | translate }}</ion-text>
+                <ion-col>
+				 <ion-label class="text-primary text08" no-padding no-margin>
+				 <ion-text color="dark">{{ 'app.pages.home.label.children' | translate }}</ion-text>
                 </ion-label>
-                <ion-select [(ngModel)]="children" cancelText="Cancel" okText="OK" (ngModelChange)="childrenArr($event)" no-padding class="text1 text-dark">
-                  <ion-select-option value="0" selected="true">0</ion-select-option>
-                  <ion-select-option value="1">1</ion-select-option>
-                  <ion-select-option value="2">2</ion-select-option>
-                  <ion-select-option value="3">3</ion-select-option>
-                  <ion-select-option value="4">4</ion-select-option>
-                  <ion-select-option value="5">5</ion-select-option>
-                  <ion-select-option value="6">6</ion-select-option>
-                  <ion-select-option value="7">7</ion-select-option>
-                  <ion-select-option value="8">8</ion-select-option>
-                  <ion-select-option value="9">9</ion-select-option>
-                </ion-select>
+          </ion-col>  
+          <ion-col text-right>
+          	<ion-input [(ngModel)]="children" inputmode="numeric"></ion-input>
+          </ion-col>
               </ion-item>
-
-          </ion-col>
-          <ion-col size="6" no-padding>
-        
-          </ion-col>
-        </ion-row>
-        
-        <ion-row *ngIf="children > 0" class="animated fadeIn">
-          <ion-col size="12" padding-vertical>
-            <ion-text color="primary" text-center>
-              <h3 class="bold" *ngIf="children > 0 && children < 2">{{ 'app.pages.home.label.childage' | translate }}</h3>
-              <h3 class="bold" *ngIf="children > 1">{{ 'app.pages.home.label.childrenages' | translate }}</h3>
-            </ion-text>
-          </ion-col>
-          <ion-col size="6" class="bb bt br bl" no-padding *ngFor="let child of childs; let i = index">
-
-              <ion-item>
-                <ion-label class="text-primary text08" no-padding no-margin>
-                  <ion-text color="dark">{{ 'app.pages.home.label.child' | translate }} {{ i + 1 }}</ion-text>
-                </ion-label>
-                <ion-select cancelText="Cancel" okText="OK" no-padding class="text08 text-dark">
-                  <ion-select-option value="0" selected="true">0</ion-select-option>
-                  <ion-select-option value="1">1</ion-select-option>
-                  <ion-select-option value="2">2</ion-select-option>
-                  <ion-select-option value="3">3</ion-select-option>
-                  <ion-select-option value="4">4</ion-select-option>
-                  <ion-select-option value="5">5</ion-select-option>
-                  <ion-select-option value="6">6</ion-select-option>
-                  <ion-select-option value="7">7</ion-select-option>
-                  <ion-select-option value="8">8</ion-select-option>
-                  <ion-select-option value="9">9</ion-select-option>
-                  <ion-select-option value="10">10</ion-select-option>
-                  <ion-select-option value="11">11</ion-select-option>
-                  <ion-select-option value="12">12</ion-select-option>
-                  <ion-select-option value="13">13</ion-select-option>
-                  <ion-select-option value="14">14</ion-select-option>
-                </ion-select>
-              </ion-item>
-
           </ion-col>         
         </ion-row>
         <ion-row class="adjust-qts">
@@ -287,9 +236,9 @@
   <ion-toolbar color="primary">
     <ion-grid no-padding>
         <ion-row>
-          <ion-col size="4" no-padding>
+          <ion-col size="8" no-padding>
             <ion-button size="small" shape="round" expand="full" fill="clear" color="tertiary" (click)=goToRentaCamper()>
-              <ion-icon slot="start" name="mper"></ion-icon>
+              <ion-icon slot="start" name="car"></ion-icon>
               {{ 'app.pages.menu.rentacamper' | translate }}
             </ion-button>
           </ion-col>
@@ -297,12 +246,6 @@
             <ion-button size="small" shape="round" expand="full" fill="clear" color="tertiary" (click)=goToActivities()>
               <ion-icon slot="start" name="beer"></ion-icon>
               {{ 'app.pages.menu.activitiestab' | translate }}
-            </ion-button>
-          </ion-col>
-          <ion-col size="4" no-padding>
-            <ion-button size="small" shape="round" expand="full" fill="clear" color="light" (click)="goToSettings()">
-              <ion-icon slot="start" name="cog"></ion-icon>
-              {{ 'app.pages.menu.settings' | translate }}
             </ion-button>
           </ion-col>
         </ion-row>

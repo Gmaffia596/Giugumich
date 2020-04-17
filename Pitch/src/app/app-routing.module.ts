@@ -35,7 +35,11 @@ const routes: Routes = [
   // tslint:disable-next-line: max-line-length
   { path: 'camper-detail/:id', loadChildren: () => import('./pages/camper-detail/camper-detail.module').then(m => m.CamperDetailPageModule) },
   { path: 'camper-checkout/:campershopID/:camperID', loadChildren:
-  () => import('./pages/camper-checkout/camper-checkout.module').then(m => m.CamperCheckoutPageModule) }
+  () => import('./pages/camper-checkout/camper-checkout.module').then(m => m.CamperCheckoutPageModule) },
+  {
+    path: 'chatbot', loadChildren: () => import('./pages/chatbot/chatbot.module').then( m => m.ChatbotPageModule)
+  }
+
 ];
 
 @NgModule({

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, LoadingController, ToastController } from '@ionic/angular';
+import { environment } from '../../../environments/environment';
 import { TranslateProvider } from '../../providers';
 
 @Component({
@@ -8,7 +9,7 @@ import { TranslateProvider } from '../../providers';
   styleUrls: ['./edit-profile.page.scss'],
 })
 export class EditProfilePage implements OnInit {
-
+  Logged: boolean;
   constructor(
     public navCtrl: NavController,
     public loadingCtrl: LoadingController,
@@ -17,8 +18,16 @@ export class EditProfilePage implements OnInit {
     ) { }
 
   ngOnInit() {
+this.Logged = environment.isUserLoggedIn;
   }
-
+  logout() {
+    environment.isUserLoggedIn = false;
+    this.navCtrl.navigateRoot('home');
+  }
+  login() {
+    environment.isUserLoggedIn = true;
+    this.navCtrl.navigateRoot('authentication');
+  }
   async sendData() {
     // send booking info
     const loader = await this.loadingCtrl.create({

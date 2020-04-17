@@ -27,14 +27,6 @@
           <ion-icon name="contact"></ion-icon>
           {{'app.pages.settings.editprofile' | translate }}
         </ion-button>
-        <ion-button *ngIf="Logged" icon-left size="small" shape="round" color="secondary" (click)="logout()">
-          <ion-icon name="log-out"></ion-icon>
-          {{'app.pages.menu.logout' | translate }}
-        </ion-button>
-        <ion-button *ngIf="!Logged" icon-left size="small" shape="round" color="secondary" (click)="login()">
-          <ion-icon name="log-in"></ion-icon>
-          {{'app.pages.menu.login' | translate }}
-        </ion-button>
       </ion-label>
     </ion-item>
   

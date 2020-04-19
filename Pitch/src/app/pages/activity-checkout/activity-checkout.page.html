@@ -19,7 +19,7 @@
     </ion-card-subtitle>    
     <div class="shadow"></div>
     <ion-card-content>
-      <ion-badge slot="start" color="dark" class="rooms">
+      <ion-badge slot="start" color="dark" class="pitches">
         <ion-icon name="checkmark" color="light"></ion-icon>
         {{ 'app.label.freecancel' | translate }}
       </ion-badge>
@@ -127,7 +127,7 @@
           </ion-row>
           <ion-row>
             <ion-col>
-              <ion-button margin-top size="large" shape="round" expand="full" color="dark" (click)="makeBooking(camping)">
+              <ion-button margin-top size="large" shape="round" expand="full" color="dark" (click)="makeBooking()">
                 <ion-icon slot="start" name="card"></ion-icon>
                 Checkout ({{ trip.price_adult * 2 | currency:'$':'code' }})
               </ion-button>
@@ -158,7 +158,7 @@
           </ion-row>
           <ion-row>
             <ion-col>
-              <ion-button margin-top size="large" shape="round" expand="full" color="dark" (click)="makeBooking(camping)">
+              <ion-button margin-top size="large" shape="round" expand="full" color="dark" (click)="makeBooking()">
                 <ion-icon slot="start" name="wallet"></ion-icon>
                 {{ 'app.button.checkout' | translate }} ({{ trip.price_adult * 2 | currency:'$':'code' }})
               </ion-button>

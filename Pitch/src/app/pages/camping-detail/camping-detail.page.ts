@@ -46,16 +46,20 @@ export class CampingDetailPage implements OnInit {
     public route: ActivatedRoute,
     public router: Router
   ) {
-    this.camping = this.campings.getItem(this.campingID);
+    console.log(this.campings);
+    this.camping = this.campings.getItem(+this.campingID);
+    console.log(this.camping);
+    
+    
   }
 
   ngOnInit() {
     console.log(this.camping);
   }
 
-  checkout(campingID: number, roomID: number) {
-    this.navCtrl.navigateForward(`camping-checkout/${campingID}/${roomID}`);
-    // this.router.navigate(['../../camping-checkout', { campingID: campingID, roomID: roomID }], { relativeTo: this.route });
+  checkout(campingID: number, pitchID: number) {
+    this.navCtrl.navigateForward(`camping-checkout/${campingID}/${pitchID}`);
+    // this.router.navigate(['../../camping-checkout', { campingID: campingID, pitchID: pitchID }], { relativeTo: this.route });
     // return await modal.present();
   }
 

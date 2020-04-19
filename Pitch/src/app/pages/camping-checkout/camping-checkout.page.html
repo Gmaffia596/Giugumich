@@ -20,25 +20,25 @@
       </ion-card-subtitle>    
       <div class="shadow"></div>
       <ion-card-content>
-        <ion-badge slot="start" color="dark" class="rooms">
+        <ion-badge slot="start" color="dark" class="pitches">
           <ion-icon name="checkmark" color="light"></ion-icon>
           {{ 'app.label.freecancel' | translate }}
         </ion-badge>
         <ion-badge slot="end" color="success" class="price">
           {{ 'app.label.totalvat' | translate }}
-          <h2><strong>{{ room.price + 4 | currency:'$':'code' }}</strong></h2>
+          <h2><strong>{{ pitch.price + 4 | currency:'$':'code' }}</strong></h2>
         </ion-badge>
       </ion-card-content>
     </ion-card>
 
     <ion-item color="primary">
       <ion-thumbnail slot="start">
-        <img [src]="room.thumb">
+        <img [src]="pitch.thumb">
       </ion-thumbnail>
       <ion-label>
-        <h2><strong>{{ room.name }}</strong></h2>
+        <h2><strong>{{ pitch.name }}</strong></h2>
         <h3>
-          {{ room.beds }}
+          {{ pitch.beds }}
         </h3>
         <ion-badge slot="start" color="dark">
           <ion-icon name="calendar" color="light"></ion-icon>
@@ -170,7 +170,7 @@
               <ion-col>
                 <ion-button margin-top size="large" shape="round" expand="full" color="dark" (click)="makeBooking(camping)">
                   <ion-icon slot="start" name="card"></ion-icon>
-                  {{ 'app.button.checkout' | translate }} ({{ room.price + 4 | currency:'$':'code' }})
+                  {{ 'app.button.checkout' | translate }} ({{ pitch.price + 4 | currency:'$':'code' }})
                 </ion-button>
               </ion-col>
             </ion-row>
@@ -201,7 +201,7 @@
               <ion-col>
                 <ion-button margin-top size="large" shape="round" expand="full" color="dark" (click)="makeBooking(camping)">
                   <ion-icon slot="start" name="wallet"></ion-icon>
-                  {{ 'app.button.checkout' | translate }} ({{ room.price + 4 | currency:'$':'code' }})
+                  {{ 'app.button.checkout' | translate }} ({{ pitch.price + 4 | currency:'$':'code' }})
                 </ion-button>
               </ion-col>
             </ion-row>

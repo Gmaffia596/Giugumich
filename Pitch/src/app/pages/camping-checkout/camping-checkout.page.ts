@@ -11,8 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 export class CampingCheckoutPage implements OnInit {
   camping: any;
   campingID: string;
-  room: any;
-  roomID: any;
+  pitch: any;
+  pitchID: any;
   paymethods: string = 'creditcard';
   // number of nights
   public nights = 7;
@@ -42,13 +42,13 @@ export class CampingCheckoutPage implements OnInit {
     public campings: CampingProvider
   ) {
    this.campingID = this.route.snapshot.paramMap.get('campingID');
-   this.roomID = this.route.snapshot.paramMap.get('roomID');
-   this.camping = this.campings.getItem(this.campingID);
-   this.room = this.campings.getRoom(this.campingID, this.roomID)
+   this.pitchID = this.route.snapshot.paramMap.get('pitchID');
+   this.camping = this.campings.getItem(+this.campingID);
+   this.pitch = this.campings.getpitch(this.campingID, this.pitchID)
   }
 
   ngOnInit() {
-    console.log(this.room);
+    console.log(this.pitch);
   }
 
   async makeBooking() {

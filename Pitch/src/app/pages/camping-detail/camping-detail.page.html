@@ -21,8 +21,8 @@
       <ion-segment-button value="details">
         <ion-label>{{ 'app.label.details' | translate }}</ion-label>
       </ion-segment-button>
-      <ion-segment-button value="rooms">
-        <ion-label>{{ 'app.label.rooms' | translate }}</ion-label>
+      <ion-segment-button value="pitches">
+        <ion-label>{{ 'app.label.pitches' | translate }}</ion-label>
       </ion-segment-button>
       <ion-segment-button value="rating">
         <ion-label>{{ 'app.label.rating' | translate }}</ion-label>
@@ -92,34 +92,34 @@
 
       </div>
 
-      <div *ngSwitchCase="'rooms'" [@staggerIn]='camping.rooms.length'>
+      <div *ngSwitchCase="'pitches'" [@staggerIn]='camping.pitches.length'>
         <ion-card no-margin margin-vertical class="bg-profile animated fadeIn">
           <ion-card-content>
             <ion-text color="light">
-              <p>{{camping.room_amenities}}</p>
+              <p>{{camping.pitch_services}}</p>
             </ion-text>
           </ion-card-content>
         </ion-card>
 
-        <ion-card no-margin margin-vertical class="bg-white" *ngFor="let room of camping.rooms">
-          <ion-img [src]="room.thumb"></ion-img>
+        <ion-card no-margin margin-vertical class="bg-white" *ngFor="let pitch of camping.pitches">
+          <ion-img [src]="pitch.thumb"></ion-img>
 
           <ion-card-content>
             
             <ion-card-subtitle>
-              <ion-text color="secondary">{{room.beds}}</ion-text>
+              <ion-text color="secondary">{{pitch.beds}}</ion-text>
             </ion-card-subtitle>
 
             <ion-card-title>
-              <ion-text color="primary">{{room.name}}</ion-text>
+              <ion-text color="primary">{{pitch.name}}</ion-text>
             </ion-card-title>
 
-            <ion-badge slot="start" color="primary" margin-bottom>{{ room.numb_available_rooms }} {{ 'app.label.availrooms' | translate }}</ion-badge>
-            <p><ion-text color="primary">{{room.room_info}}</ion-text></p>
+            <ion-badge slot="start" color="primary" margin-bottom>{{ pitch.numb_available_pitch }} {{ 'app.label.availpitches' | translate }}</ion-badge>
+            <p><ion-text color="primary">{{pitch.pitch_info}}</ion-text></p>
             
-            <ion-button size="large" shape="round" expand="full" color="success" (click)="checkout(camping.id, room.id)">
+            <ion-button size="large" shape="round" expand="full" color="success" (click)="checkout(camping.id, pitch.id)">
               <ion-icon slot="start" name="book"></ion-icon>
-              {{ 'app.label.book' | translate }} ({{ room.price | currency:'$':'code' }})
+              {{ 'app.label.book' | translate }} ({{ pitch.price | currency:'$':'code' }})
             </ion-button>
           </ion-card-content>
 

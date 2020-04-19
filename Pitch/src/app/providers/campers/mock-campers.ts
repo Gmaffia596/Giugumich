@@ -9,13 +9,13 @@ export let CAMPERS= [
     luggage: 2,
     doors_from: 2,
     doors_to: 4,
-    thumb: 'assets/img/car/thumb/car_1.jpg',
+    thumb: 'assets/img/camper/thumb/camper_1.jpg',
     price: 100,
     cars: [
       {
         id: 1,
         name: 'Ford Focus B2017',
-        thumb: 'assets/img/car/thumb/car_1.jpg',
+        thumb: 'assets/img/camper/thumb/camper_1.jpg',
         price: 100,
         doors: 2,
         passengers: 4,
@@ -30,7 +30,7 @@ export let CAMPERS= [
       {
         id: 2,
         name: 'Volkswagen Jetta Tbi',
-        thumb: 'assets/img/car/thumb/car_4.jpg',
+        thumb: 'assets/img/camper/thumb/camper_4.jpg',
         price: 250,
         doors: 4,
         passengers: 5,
@@ -54,13 +54,13 @@ export let CAMPERS= [
     luggage: 2,
     doors_from: 2,
     doors_to: 4,
-    thumb: 'assets/img/car/thumb/car_2.jpg',
+    thumb: 'assets/img/camper/thumb/camper_2.jpg',
     price: 250,
     cars: [
       {
         id: 1,
         name: 'Ford Focus B2017',
-        thumb: 'assets/img/car/thumb/car_2.jpg',
+        thumb: 'assets/img/camper/thumb/camper_2.jpg',
         price: 100,
         doors: 2,
         passengers: 4,
@@ -75,7 +75,7 @@ export let CAMPERS= [
       {
         id: 2,
         name: 'Volkswagen Jetta Tbi',
-        thumb: 'assets/img/car/thumb/car_3.jpg',
+        thumb: 'assets/img/camper/thumb/camper_3.jpg',
         price: 250,
         doors: 4,
         passengers: 5,
@@ -99,13 +99,13 @@ export let CAMPERS= [
     luggage: 2,
     doors_from: 2,
     doors_to: 4,
-    thumb: 'assets/img/car/thumb/car_3.jpg',
+    thumb: 'assets/img/camper/thumb/camper_3.jpg',
     price: 200,
     cars: [
       {
         id: 1,
         name: 'Ford Focus B2017',
-        thumb: 'assets/img/car/thumb/car_3.jpg',
+        thumb: 'assets/img/camper/thumb/camper_3.jpg',
         price: 100,
         doors: 2,
         passengers: 4,
@@ -120,7 +120,7 @@ export let CAMPERS= [
       {
         id: 1,
         name: 'Volkswagen Jetta Tbi',
-        thumb: 'assets/img/car/thumb/car_1.jpg',
+        thumb: 'assets/img/camper/thumb/camper_1.jpg',
         price: 250,
         doors: 4,
         passengers: 5,
@@ -144,13 +144,13 @@ export let CAMPERS= [
     luggage: 2,
     doors_from: 2,
     doors_to: 4,
-    thumb: 'assets/img/car/thumb/car_4.jpg',
+    thumb: 'assets/img/camper/thumb/camper_4.jpg',
     price: 350,
     cars: [
       {
         id: 1,
         name: 'Ford Focus B2017',
-        thumb: 'assets/img/car/thumb/car_4.jpg',
+        thumb: 'assets/img/camper/thumb/camper_4.jpg',
         price: 100,
         doors: 2,
         passengers: 4,
@@ -165,7 +165,7 @@ export let CAMPERS= [
       {
         id: 2,
         name: 'Volkswagen Jetta Tbi',
-        thumb: 'assets/img/car/thumb/car_2.jpg',
+        thumb: 'assets/img/camper/thumb/camper_2.jpg',
         price: 250,
         doors: 4,
         passengers: 5,

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CAMPING } from './mock-camping';
+import { first } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -23,19 +24,15 @@ export class CampingProvider {
         return this.campings;
     }
 
-    getItem(id) {
-        for (let i = 0; i < this.campings.lenght; i++) {
-            if (this.campings[i].id === parseInt(id)) {
-                return this.campings[i];
-            }
-        }
+    getItem(id: number) {
+        return this.campings.filter(x => x.id === id)[0];
     }
-    getRoom(campingID, roomID) {
+    getpitch(campingID, pitchID) {
         const camping = this.getItem(campingID);
 
-        for (let i = 0; i < camping.rooms.length; i++) {
-            if (camping.rooms[i].id === parseInt(roomID)) {
-                return camping.rooms[i];
+        for (let i = 0; i < camping.pitches.length; i++) {
+            if (camping.pitches[i].id === parseInt(pitchID)) {
+                return camping.pitches[i];
             }
         }
 

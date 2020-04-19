@@ -27,7 +27,7 @@ const routes: Routes = [
   { path: 'camping-list', loadChildren: () => import('./pages/camping-list/camping-list.module').then(m => m.CampingListPageModule) },
   // tslint:disable-next-line: max-line-length
   { path: 'camping-detail/:id', loadChildren: () => import('./pages/camping-detail/camping-detail.module').then(m => m.CampingDetailPageModule) },
-  { path: 'camping-checkout/:campingID/:roomID', loadChildren:
+  { path: 'camping-checkout/:campingID/:pitchID', loadChildren:
   () => import('./pages/camping-checkout/camping-checkout.module').then(m => m.CampingCheckoutPageModule) },
 
   { path: 'rentcamper', loadChildren: () => import('./pages/rentcamper/rentcamper.module').then(m => m.RentcamperPageModule) },

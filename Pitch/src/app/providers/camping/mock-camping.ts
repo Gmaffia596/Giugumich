@@ -1,28 +1,28 @@
 export let CAMPING = [
     {
         id: 1,
-        name: 'Copacabana Camping',
-        rating: 5,
+        name: 'Camping Village del Sole e del Turco',
+        rating: 4,
         price: 150,
         sale_price: 120,
         location: {
           lat: -22.906847,
           lon: -43.172896,
         },
-        address: 'Av Pres. Antônio Carlos, 223',
-        description: 'Situated in the best rated area in Rio de Janeiro, this property has an excellent location.',
+        address: 'Lungomare Enrico Mattei, 87, 71019 Vieste FG',
+        description: 'Il Villaggio Camping è il luogo ideale per trascorrere le vacanze al mare in ampi spazi aperti, all’ombra di alberi di pino e di eucalipto, senza rinunciare al comfort e a servizi di qualità per tutta la famiglia.',
         // tslint:disable-next-line: max-line-length
-        location_text: 'Located in the Copacabana district in Rio de Janeiro, 80 m from Copacabana Beach, Ritz Copacabana Boutique Hotel features an outdoor pool and views of the city. Guests can enjoy the on-site bar. ',
+        location_text: 'Situato a Vieste, a pochi metri dalla spiaggia del Pizzomunno, la principale del paese, a circa a 1500 metri dal centro, raggiungibile a piedi con una passeggiata sul suggestivo lungomare.',
         // tslint:disable-next-line: max-line-length
-        features: 'Along with A lot of restaurants and businnes conference room, this hotel has a full-service spa and an outdoor pool. Free WiFi in public areas and free valet parking are also provided. Other amenities include a nightclub, a health club, and a bar/lounge. ',
+        features: 'Terreno sabbioso ed erboso, direttamente sul mare con spiaggia libera gratuita e a 100 mt  spiaggia attrezzata a pagamento e parco giochi',
         // tslint:disable-next-line: max-line-length
-        room_amenities: 'Every room at this hotel is air conditioned and has a flat-screen TV. Each room comes with a private bathroom. For your comfort, you will find free toiletries and a hair dryer. ',
-        thumb: 'assets/img/hotel/thumb/hotel_1.jpg',
+        pitch_services: 'Ogni piazzola in questo campeggio dispone di copertura wifi e di un bagno personale. Per il vostro confort, troverete al loro interno asciugacapelli. ',
+        thumb: 'assets/img/camping/thumb/camping_1.jpg',
         images: [
-          'assets/img/hotel/thumb/hotel_1.jpg',
-          'assets/img/hotel/thumb/hotel_4.jpg',
-          'assets/img/hotel/thumb/hotel_5.jpg',
-          'assets/img/hotel/thumb/hotel_6.jpg'
+          'assets/img/camping/thumb/camping_1.jpg',
+          'assets/img/camping/thumb/camping_4.jpg',
+          'assets/img/camping/thumb/camping_5.jpg',
+          'assets/img/camping/thumb/camping_6.jpg'
         ],
         free_wifi: 1,
         services: [
@@ -57,23 +57,23 @@ export let CAMPING = [
             name: 'Beach'
           }
         ],
-        numb_available_rooms: 3,
+        numb_available_pitch: 3,
         reviews: [
           {
             id: 1,
-            username: 'Oliver Bishop',
-            from: 'Chesterfield, UK',
-            title: 'Nice place',
+            username: 'Mario Biondi',
+            from: 'Chieti',
+            title: 'Bel posto',
             // tslint:disable-next-line: max-line-length
-            content: 'The hotel staff were very helpful in all ways, nothing was too much trouble. The bar had a fantastic happy hour being good nibbles and great value. One of my best hotels.',
+            content: 'Lo staff del campeggio è stato molto disponibile per ogni evenienza, noessun problema. Il bar dispone di prodotti di qualità ad un ottimo prezzo. Uno dei migliori campeggi.',
             rating: 4
           },
           {
             id: 2,
-            username: ' Alejandro Suarez',
-            from: 'Bogotá, CO',
-            title: 'Close to old quarter',
-            content: '4 nights. Nice suite Staff very helpful. Easy to get cabs',
+            username: '',
+            from: 'Roma',
+            title: 'Contento',
+            content: '4 notti. Staff molto efficiente. Facile da reperire.',
             rating: 4
           },
           {
@@ -82,29 +82,29 @@ export let CAMPING = [
             from: 'Cincinnati, US',
             title: 'Short stay',
             // tslint:disable-next-line: max-line-length
-            content: 'Hotel reception staff speak limited English and not so friendly. Access to nearby food & beverage outside the hotel is not convenient.',
+            content: 'Camping reception staff speak limited English and not so friendly. Access to nearby food & beverage outside the hotel is not convenient.',
             rating: 3
           },
           {
             id: 4,
-            username: 'Jorge Silva',
-            from: 'São Paulo, BR',
-            title: 'Disappointing and overpriced',
+            username: 'Giorgia Neri',
+            from: 'Milano',
+            title: 'Scontenta e costoso',
             // tslint:disable-next-line: max-line-length
-            content: 'Disappointing stay as the condition of the hotel was the exact opposite of last hotel. The pool and fitness area looked alrite, but the staff was helpful.',
+            content: 'Non sono daccord con le condizioni di questo campeggio che sono l opposto rispetto all ultimo campeggio che ho visitato, ma lo staff è stato cordiale.',
             rating: 2
           }
         ],
-        rooms: [
+        pitches: [
           {
             id: 1,
             active: 1,
-            name: 'Deluxe Room',
+            name: 'Deluxe pitch',
             beds: '1 king bed or 1 twin bed',
-            numb_available_rooms: 4,
+            numb_available_pitch: 4,
             refundable: 0,
-            room_info: 'Free Parking, Free Internet and Free Breakfast.',
-            thumb: 'assets/img/hotel/thumb/hotel_4.jpg',
+            pitch_info: 'Free Parking, Free Internet and Free Breakfast.',
+            thumb: 'assets/img/camping/thumb/camping_4.jpg',
             price: 120
           },
           {
@@ -112,17 +112,17 @@ export let CAMPING = [
             active: 0,
             name: 'Grand Deluxe',
             beds: '1 king bed or 1 queen bed',
-            numb_available_rooms: 2,
+            numb_available_pitch: 2,
             refundable: 0,
-            room_info: 'Free Internet and Free Breakfast.',
-            thumb: 'assets/img/hotel/thumb/hotel_2.jpg',
+            pitch_info: 'Free Internet and Free Breakfast.',
+            thumb: 'assets/img/camping/thumb/camping_2.jpg',
             price: 180
           },
         ]
       },
       {
         id: 2,
-        name: 'La Belle Camping',
+        name: 'Camping Lido Salpi',
         rating: 4.7,
         price: 120,
         sale_price: 80,
@@ -130,20 +130,20 @@ export let CAMPING = [
           lat: -22.969778,
           lon: -43.186859,
         },
-        address: 'Av Copacabana, 44',
-        description: 'Family-friendly place in Rio de Janeiro, close to Flamengo Beach.',
+        address: 'Riviera Sud - ex S.S. 159 Km 6,200, 71043 Manfredonia FG',
+        description: 'Il Villaggio Camping è il luogo ideale per trascorrere le vacanze al mare in ampi spazi aperti, all’ombra di alberi di pino e di eucalipto, senza rinunciare al comfort e a servizi di qualità per tutta la famiglia.',
         // tslint:disable-next-line: max-line-length
-        location_text: 'This family-friendly Rio de Janeiro hotel is located in the business district, within 1 mi of Flamengo Beach, near of Arts Museum and Christ Redeemer. Leblon shop center and Botafogo Beach are close to 2 mi. ',
+        location_text: 'Situato a Manfredonia, a pochi metri dalla spiaggia del Pizzomunno, la principale del paese, a circa a 1500 metri dal centro, raggiungibile a piedi con una passeggiata sul suggestivo lungomare.',
         // tslint:disable-next-line: max-line-length
-        features: 'Along with A lot of restaurants and businnes conference room, this hotel has a full-service spa and an outdoor pool. Free WiFi in public areas and free valet parking are also provided. Other amenities include a nightclub, a health club, and a bar/lounge. ',
+        features: 'Terreno sabbioso ed erboso, direttamente sul mare con spiaggia libera gratuita e a 100 mt  spiaggia attrezzata a pagamento e parco giochi',
         // tslint:disable-next-line: max-line-length
-        room_amenities: 'All 250 rooms feature thoughtful touches like bathrobes and slippers, plus free WiFi, free wired Internet, and LCD TVs with satellite channels. Guests will also find sitting areas, 24-hour room service, and minibars. ',
-        thumb: 'assets/img/hotel/thumb/hotel_2.jpg',
+        pitch_services: 'Ogni piazzola in questo campeggio dispone di copertura wifi e di un bagno personale. Per il vostro confort, troverete al loro interno asciugacapelli. ',
+        thumb: 'assets/img/camping/thumb/camping_2.jpg',
         images: [
-          'assets/img/hotel/thumb/hotel_2.jpg',
-          'assets/img/hotel/thumb/hotel_4.jpg',
-          'assets/img/hotel/thumb/hotel_5.jpg',
-          'assets/img/hotel/thumb/hotel_6.jpg'
+          'assets/img/camping/thumb/camping_2.jpg',
+          'assets/img/camping/thumb/camping_4.jpg',
+          'assets/img/camping/thumb/camping_5.jpg',
+          'assets/img/camping/thumb/camping_6.jpg'
         ],
         free_wifi: 1,
         services: [
@@ -178,23 +178,23 @@ export let CAMPING = [
             name: 'Beach'
           }
         ],
-        numb_available_rooms: 12,
+        numb_available_pitch: 12,
         reviews: [
           {
             id: 1,
-            username: 'Oliver Bishop',
-            from: 'Chesterfield, UK',
-            title: 'Nice place, as long as you don t want to leave',
+            username: 'Mario Biondi',
+            from: 'Chieti',
+            title: 'Bel posto',
             // tslint:disable-next-line: max-line-length
-            content: 'The hotel staff were very helpful in all ways, nothing was too much trouble. The bar had a fantastic happy hour being good nibbles and great value. One of my best hotels.',
+            content: 'Lo staff del campeggio è stato molto disponibile per ogni evenienza, noessun problema. Il bar dispone di prodotti di qualità ad un ottimo prezzo. Uno dei migliori campeggi.',
             rating: 4
           },
           {
             id: 2,
-            username: ' Alejandro Suarez',
-            from: 'Bogotá, CO',
-            title: 'Close to old quarter',
-            content: '4 nights. Nice suite Staff very helpful. Easy to get cabs',
+            username: '',
+            from: 'Roma',
+            title: 'Contento',
+            content: '4 notti. Staff molto efficiente. Facile da reperire.',
             rating: 4
           },
           {
@@ -203,29 +203,29 @@ export let CAMPING = [
             from: 'Cincinnati, US',
             title: 'Short stay',
             // tslint:disable-next-line: max-line-length
-            content: 'Hotel reception staff speak limited English and not so friendly. Access to nearby food & beverage outside the hotel is not convenient.',
+            content: 'Camping reception staff speak limited English and not so friendly. Access to nearby food & beverage outside the hotel is not convenient.',
             rating: 3
           },
           {
             id: 4,
-            username: 'Jorge Silva',
-            from: 'São Paulo, BR',
-            title: 'Disappointing and overpriced',
+            username: 'Giorgia Neri',
+            from: 'Milano',
+            title: 'Scontenta e costoso',
             // tslint:disable-next-line: max-line-length
-            content: 'Disappointing stay as the condition of the hotel was the exact opposite of last hotel. The pool and fitness area looked alrite, but the staff was helpful.',
+            content: 'Non sono daccord con le condizioni di questo campeggio che sono l opposto rispetto all ultimo campeggio che ho visitato, ma lo staff è stato cordiale.',
             rating: 2
           }
         ],
-        rooms: [
+        pitches: [
           {
             id: 1,
             active: 1,
-            name: 'Deluxe Room',
+            name: 'Deluxe pitch',
             beds: '1 king bed or 1 twin bed',
-            numb_available_rooms: 1,
+            numb_available_pitch: 1,
             refundable: 0,
-            room_info: 'Free Parking, Free Internet and Free Breakfast.',
-            thumb: 'assets/img/hotel/thumb/hotel_4.jpg',
+            pitch_info: 'Free Parking, Free Internet and Free Breakfast.',
+            thumb: 'assets/img/camping/thumb/camping_4.jpg',
             price: 120
           },
           {
@@ -233,17 +233,17 @@ export let CAMPING = [
             active: 0,
             name: 'Grand Deluxe',
             beds: '1 king bed or 1 queen bed',
-            numb_available_rooms: 2,
+            numb_available_pitch: 2,
             refundable: 0,
-            room_info: 'Free Internet and Free Breakfast.',
-            thumb: 'assets/img/hotel/thumb/hotel_2.jpg',
+            pitch_info: 'Free Internet and Free Breakfast.',
+            thumb: 'assets/img/camping/thumb/camping_2.jpg',
             price: 180
           },
         ]
       },
       {
         id: 3,
-        name: 'Marshal Hotel',
+        name: 'Eurovacanzevillaggi S.R.L.',
         rating: 4.5,
         price: 100,
         sale_price: 70,
@@ -251,20 +251,20 @@ export let CAMPING = [
           lat: -22.984337,
           lon: -43.223142,
         },
-        address: 'Av Ataulfo de Paiva, 98',
-        description: 'Family-friendly place in Rio de Janeiro, close to Copacabana Beach',
+        address: 'Via Salvatore Matarrese, 2, 70124 Bari BA',
+        description: 'Il Villaggio Camping è il luogo ideale per trascorrere le vacanze al mare in ampi spazi aperti, all’ombra di alberi di pino e di eucalipto, senza rinunciare al comfort e a servizi di qualità per tutta la famiglia.',
         // tslint:disable-next-line: max-line-length
-        location_text: 'This family-friendly Rio de Janeiro hotel is located in the business district, within 1 mi of Copacabana Beach, near of Arts Museum and Christ Redeemer. Leblon shop center and Botafogo Beach are close to 2 mi. ',
+        location_text: 'Situato a Bari, a pochi metri dalla spiaggia del Pizzomunno, la principale del paese, a circa a 1500 metri dal centro, raggiungibile a piedi con una passeggiata sul suggestivo lungomare.',
         // tslint:disable-next-line: max-line-length
-        features: 'Along with A lot of restaurants and businnes conference room, this hotel has a full-service spa and an outdoor pool. Free WiFi in public areas and free valet parking are also provided. Other amenities include a nightclub, a health club, and a bar/lounge. ',
+        features: 'Terreno sabbioso ed erboso, direttamente sul mare con spiaggia libera gratuita e a 100 mt  spiaggia attrezzata a pagamento e parco giochi',
         // tslint:disable-next-line: max-line-length
-        room_amenities: 'All 250 rooms feature thoughtful touches like bathrobes and slippers, plus free WiFi, free wired Internet, and LCD TVs with satellite channels. Guests will also find sitting areas, 24-hour room service, and minibars. ',
-        thumb: 'assets/img/hotel/thumb/hotel_3.jpg',
+        pitch_services: 'Ogni piazzola in questo campeggio dispone di copertura wifi e di un bagno personale. Per il vostro confort, troverete al loro interno asciugacapelli. ',
+        thumb: 'assets/img/camping/thumb/camping_3.jpg',
         images: [
-          'assets/img/hotel/thumb/hotel_3.jpg',
-          'assets/img/hotel/thumb/hotel_4.jpg',
-          'assets/img/hotel/thumb/hotel_5.jpg',
-          'assets/img/hotel/thumb/hotel_6.jpg'
+          'assets/img/camping/thumb/camping_3.jpg',
+          'assets/img/camping/thumb/camping_4.jpg',
+          'assets/img/camping/thumb/camping_5.jpg',
+          'assets/img/camping/thumb/camping_6.jpg'
         ],
         free_wifi: 1,
         services: [
@@ -299,23 +299,23 @@ export let CAMPING = [
             name: 'Beach'
           }
         ],
-        numb_available_rooms: 5,
+        numb_available_pitch: 5,
         reviews: [
           {
             id: 1,
-            username: 'Oliver Bishop',
-            from: 'Chesterfield, UK',
-            title: 'Nice place, as long as you don t want to leave',
+            username: 'Mario Biondi',
+            from: 'Chieti',
+            title: 'Bel posto',
             // tslint:disable-next-line: max-line-length
-            content: 'The hotel staff were very helpful in all ways, nothing was too much trouble. The bar had a fantastic happy hour being good nibbles and great value. One of my best hotels.',
+            content: 'Lo staff del campeggio è stato molto disponibile per ogni evenienza, noessun problema. Il bar dispone di prodotti di qualità ad un ottimo prezzo. Uno dei migliori campeggi.',
             rating: 4
           },
           {
             id: 2,
-            username: ' Alejandro Suarez',
-            from: 'Bogotá, CO',
-            title: 'Close to old quarter',
-            content: '4 nights. Nice suite Staff very helpful. Easy to get cabs',
+            username: '',
+            from: 'Roma',
+            title: 'Contento',
+            content: '4 notti. Staff molto efficiente. Facile da reperire.',
             rating: 4
           },
           {
@@ -324,29 +324,29 @@ export let CAMPING = [
             from: 'Cincinnati, US',
             title: 'Short stay',
             // tslint:disable-next-line: max-line-length
-            content: 'Hotel reception staff speak limited English and not so friendly. Access to nearby food & beverage outside the hotel is not convenient.',
+            content: 'Camping reception staff speak limited English and not so friendly. Access to nearby food & beverage outside the hotel is not convenient.',
             rating: 3
           },
           {
             id: 4,
-            username: 'Jorge Silva',
-            from: 'São Paulo, BR',
-            title: 'Disappointing and overpriced',
+            username: 'Giorgia Neri',
+            from: 'Milano',
+            title: 'Scontenta e costoso',
             // tslint:disable-next-line: max-line-length
-            content: 'Disappointing stay as the condition of the hotel was the exact opposite of last hotel. The pool and fitness area looked alrite, but the staff was helpful.',
+            content: 'Non sono daccord con le condizioni di questo campeggio che sono l opposto rispetto all ultimo campeggio che ho visitato, ma lo staff è stato cordiale.',
             rating: 2
           }
         ],
-        rooms: [
+        pitches: [
           {
             id: 1,
             active: 1,
-            name: 'Deluxe Room',
+            name: 'Deluxe pitch',
             beds: '1 king bed or 1 twin bed',
-            numb_available_rooms: 1,
+            numb_available_pitch: 1,
             refundable: 0,
-            room_info: 'Free Parking, Free Internet and Free Breakfast.',
-            thumb: 'assets/img/hotel/thumb/hotel_4.jpg',
+            pitch_info: 'Free Parking, Free Internet and Free Breakfast.',
+            thumb: 'assets/img/camping/thumb/camping_4.jpg',
             price: 120
           },
           {
@@ -354,17 +354,17 @@ export let CAMPING = [
             active: 0,
             name: 'Grand Deluxe',
             beds: '1 king bed or 1 queen bed',
-            numb_available_rooms: 2,
+            numb_available_pitch: 2,
             refundable: 0,
-            room_info: 'Free Internet and Free Breakfast.',
-            thumb: 'assets/img/hotel/thumb/hotel_2.jpg',
+            pitch_info: 'Free Internet and Free Breakfast.',
+            thumb: 'assets/img/camping/thumb/camping_2.jpg',
             price: 180
           },
         ]
       },
       {
         id: 4,
-        name: 'Pousada Marés do Amanhã',
+        name: 'Camping La Masseria',
         rating: 3.3,
         price: 40,
         sale_price: 30,
@@ -372,20 +372,20 @@ export let CAMPING = [
           lat: -22.933129,
           lon: -43.177427,
         },
-        address: 'Praia do Flamengo',
-        description: 'Family-friendly place in Rio de Janeiro, close to Flamengo Beach',
+        address: 'Via Tenuta di Torre Sabea, 73014 Gallipoli LE',
+        description: 'Il Villaggio Camping è il luogo ideale per trascorrere le vacanze al mare in ampi spazi aperti, all’ombra di alberi di pino e di eucalipto, senza rinunciare al comfort e a servizi di qualità per tutta la famiglia.',
         // tslint:disable-next-line: max-line-length
-        location_text: 'This family-friendly Rio de Janeiro hotel is located in the business district, within 1 mi of Flamengo Beach, near of Arts Museum and Christ Redeemer. Leblon shop center and Botafogo Beach are close to 2 mi. ',
+        location_text: 'Situato a Gallipoli, a pochi metri dalla spiaggia del Pizzomunno, la principale del paese, a circa a 1500 metri dal centro, raggiungibile a piedi con una passeggiata sul suggestivo lungomare.',
         // tslint:disable-next-line: max-line-length
-        features: 'Along with A lot of restaurants and businnes conference room, this hotel has a full-service spa and an outdoor pool. Free WiFi in public areas and free valet parking are also provided. Other amenities include a nightclub, a health club, and a bar/lounge. ',
+        features: 'Terreno sabbioso ed erboso, direttamente sul mare con spiaggia libera gratuita e a 100 mt  spiaggia attrezzata a pagamento e parco giochi',
         // tslint:disable-next-line: max-line-length
-        room_amenities: 'All 250 rooms feature thoughtful touches like bathrobes and slippers, plus free WiFi, free wired Internet, and LCD TVs with satellite channels. Guests will also find sitting areas, 24-hour room service, and minibars. ',
-        thumb: 'assets/img/hotel/thumb/hotel_4.jpg',
+        pitch_services: 'Ogni piazzola in questo campeggio dispone di copertura wifi e di un bagno personale. Per il vostro confort, troverete al loro interno asciugacapelli. ',
+        thumb: 'assets/img/camping/thumb/camping_4.jpg',
         images: [
-          'assets/img/hotel/thumb/hotel_4.jpg',
-          'assets/img/hotel/thumb/hotel_7.jpg',
-          'assets/img/hotel/thumb/hotel_5.jpg',
-          'assets/img/hotel/thumb/hotel_6.jpg'
+          'assets/img/camping/thumb/camping_4.jpg',
+          'assets/img/camping/thumb/camping_7.jpg',
+          'assets/img/camping/thumb/camping_5.jpg',
+          'assets/img/camping/thumb/camping_6.jpg'
         ],
         free_wifi: 1,
         services: [
@@ -420,23 +420,23 @@ export let CAMPING = [
             name: 'Beach'
           }
         ],
-        numb_available_rooms: 5,
+        numb_available_pitch: 5,
         reviews: [
           {
             id: 1,
-            username: 'Oliver Bishop',
-            from: 'Chesterfield, UK',
-            title: 'Nice place, as long as you don t want to leave',
+            username: 'Mario Biondi',
+            from: 'Chieti',
+            title: 'Bel posto',
             // tslint:disable-next-line: max-line-length
-            content: 'The hotel staff were very helpful in all ways, nothing was too much trouble. The bar had a fantastic happy hour being good nibbles and great value. One of my best hotels.',
+            content: 'Lo staff del campeggio è stato molto disponibile per ogni evenienza, noessun problema. Il bar dispone di prodotti di qualità ad un ottimo prezzo. Uno dei migliori campeggi.',
             rating: 4
           },
           {
             id: 2,
-            username: ' Alejandro Suarez',
-            from: 'Bogotá, CO',
-            title: 'Close to old quarter',
-            content: '4 nights. Nice suite Staff very helpful. Easy to get cabs',
+            username: '',
+            from: 'Roma',
+            title: 'Contento',
+            content: '4 notti. Staff molto efficiente. Facile da reperire.',
             rating: 4
           },
           {
@@ -445,29 +445,29 @@ export let CAMPING = [
             from: 'Cincinnati, US',
             title: 'Short stay',
             // tslint:disable-next-line: max-line-length
-            content: 'Hotel reception staff speak limited English and not so friendly. Access to nearby food & beverage outside the hotel is not convenient.',
+            content: 'Camping reception staff speak limited English and not so friendly. Access to nearby food & beverage outside the hotel is not convenient.',
             rating: 3
           },
           {
             id: 4,
-            username: 'Jorge Silva',
-            from: 'São Paulo, BR',
-            title: 'Disappointing and overpriced',
+            username: 'Giorgia Neri',
+            from: 'Milano',
+            title: 'Scontenta e costoso',
             // tslint:disable-next-line: max-line-length
-            content: 'Disappointing stay as the condition of the hotel was the exact opposite of last hotel. The pool and fitness area looked alrite, but the staff was helpful.',
+            content: 'Non sono daccord con le condizioni di questo campeggio che sono l opposto rispetto all ultimo campeggio che ho visitato, ma lo staff è stato cordiale.',
             rating: 2
           }
         ],
-        rooms: [
+        pitches: [
           {
             id: 1,
             active: 1,
-            name: 'Deluxe Room',
+            name: 'Deluxe pitch',
             beds: '1 king bed or 1 twin bed',
-            numb_available_rooms: 1,
+            numb_available_pitch: 1,
             refundable: 0,
-            room_info: 'Free Parking, Free Internet and Free Breakfast.',
-            thumb: 'assets/img/hotel/thumb/hotel_4.jpg',
+            pitch_info: 'Free Parking, Free Internet and Free Breakfast.',
+            thumb: 'assets/img/camping/thumb/camping_4.jpg',
             price: 120
           },
           {
@@ -475,17 +475,17 @@ export let CAMPING = [
             active: 0,
             name: 'Grand Deluxe',
             beds: '1 king bed or 1 queen bed',
-            numb_available_rooms: 2,
+            numb_available_pitch: 2,
             refundable: 0,
-            room_info: 'Free Internet and Free Breakfast.',
-            thumb: 'assets/img/hotel/thumb/hotel_2.jpg',
+            pitch_info: 'Free Internet and Free Breakfast.',
+            thumb: 'assets/img/camping/thumb/camping_2.jpg',
             price: 180
           },
         ]
       },
       {
         id: 5,
-        name: 'Ipanema Garden Hotel',
+        name: 'Camping Santo Stefano',
         rating: 3.5,
         price: 50,
         sale_price: 40,
@@ -493,20 +493,20 @@ export let CAMPING = [
           lat: -22.984667,
           lon: -43.198593,
         },
-        address: 'Av Vieira Solto, 13',
-        description: 'Family-friendly place in Rio de Janeiro, close to Copacabana Beach',
+        address: 'Contrada Santo Stefano, 70043 Monopoli BA',
+        description: 'Il Villaggio Camping è il luogo ideale per trascorrere le vacanze al mare in ampi spazi aperti, all’ombra di alberi di pino e di eucalipto, senza rinunciare al comfort e a servizi di qualità per tutta la famiglia.',
         // tslint:disable-next-line: max-line-length
-        location_text: 'This family-friendly Rio de Janeiro hotel is located in the business district, within 1 mi of Copacabana Beach, near of Arts Museum and Christ Redeemer. Leblon shop center and Botafogo Beach are close to 2 mi. ',
+        location_text: 'Situato a Monopoli, a pochi metri dalla spiaggia del Pizzomunno, la principale del paese, a circa a 1500 metri dal centro, raggiungibile a piedi con una passeggiata sul suggestivo lungomare.',
         // tslint:disable-next-line: max-line-length
-        features: 'Along with A lot of restaurants and businnes conference room, this hotel has a full-service spa and an outdoor pool. Free WiFi in public areas and free valet parking are also provided. Other amenities include a nightclub, a health club, and a bar/lounge. ',
+        features: 'Terreno sabbioso ed erboso, direttamente sul mare con spiaggia libera gratuita e a 100 mt  spiaggia attrezzata a pagamento e parco giochi',
         // tslint:disable-next-line: max-line-length
-        room_amenities: 'All 250 rooms feature thoughtful touches like bathrobes and slippers, plus free WiFi, free wired Internet, and LCD TVs with satellite channels. Guests will also find sitting areas, 24-hour room service, and minibars. ',
-        thumb: 'assets/img/hotel/thumb/hotel_5.jpg',
+        pitch_services: 'Ogni piazzola in questo campeggio dispone di copertura wifi e di un bagno personale. Per il vostro confort, troverete al loro interno asciugacapelli. ',
+        thumb: 'assets/img/camping/thumb/camping_5.jpg',
         images: [
-          'assets/img/hotel/thumb/hotel_5.jpg',
-          'assets/img/hotel/thumb/hotel_8.jpg',
-          'assets/img/hotel/thumb/hotel_7.jpg',
-          'assets/img/hotel/thumb/hotel_6.jpg'
+          'assets/img/camping/thumb/camping_5.jpg',
+          'assets/img/camping/thumb/camping_8.jpg',
+          'assets/img/camping/thumb/camping_7.jpg',
+          'assets/img/camping/thumb/camping_6.jpg'
         ],
         free_wifi: 1,
         services: [
@@ -541,23 +541,23 @@ export let CAMPING = [
             name: 'Beach'
           }
         ],
-        numb_available_rooms: 4,
+        numb_available_pitch: 4,
         reviews: [
           {
             id: 1,
-            username: 'Oliver Bishop',
-            from: 'Chesterfield, UK',
-            title: 'Nice place, as long as you don t want to leave',
+            username: 'Mario Biondi',
+            from: 'Chieti',
+            title: 'Bel posto',
             // tslint:disable-next-line: max-line-length
-            content: 'The hotel staff were very helpful in all ways, nothing was too much trouble. The bar had a fantastic happy hour being good nibbles and great value. One of my best hotels.',
+            content: 'Lo staff del campeggio è stato molto disponibile per ogni evenienza, noessun problema. Il bar dispone di prodotti di qualità ad un ottimo prezzo. Uno dei migliori campeggi.',
             rating: 4
           },
           {
             id: 2,
-            username: ' Alejandro Suarez',
-            from: 'Bogotá, CO',
-            title: 'Close to old quarter',
-            content: '4 nights. Nice suite Staff very helpful. Easy to get cabs',
+            username: '',
+            from: 'Roma',
+            title: 'Contento',
+            content: '4 notti. Staff molto efficiente. Facile da reperire.',
             rating: 4
           },
           {
@@ -566,29 +566,29 @@ export let CAMPING = [
             from: 'Cincinnati, US',
             title: 'Short stay',
             // tslint:disable-next-line: max-line-length
-            content: 'Hotel reception staff speak limited English and not so friendly. Access to nearby food & beverage outside the hotel is not convenient.',
+            content: 'Camping reception staff speak limited English and not so friendly. Access to nearby food & beverage outside the hotel is not convenient.',
             rating: 3
           },
           {
             id: 4,
-            username: 'Jorge Silva',
-            from: 'São Paulo, BR',
-            title: 'Disappointing and overpriced',
+            username: 'Giorgia Neri',
+            from: 'Milano',
+            title: 'Scontenta e costoso',
             // tslint:disable-next-line: max-line-length
-            content: 'Disappointing stay as the condition of the hotel was the exact opposite of last hotel. The pool and fitness area looked alrite, but the staff was helpful.',
+            content: 'Non sono daccord con le condizioni di questo campeggio che sono l opposto rispetto all ultimo campeggio che ho visitato, ma lo staff è stato cordiale.',
             rating: 2
           }
         ],
-        rooms: [
+        pitches: [
           {
             id: 1,
             active: 1,
-            name: 'Deluxe Room',
+            name: 'Deluxe pitch',
             beds: '1 king bed or 1 twin bed',
-            numb_available_rooms: 1,
+            numb_available_pitch: 1,
             refundable: 0,
-            room_info: 'Free Parking, Free Internet and Free Breakfast.',
-            thumb: 'assets/img/hotel/thumb/hotel_4.jpg',
+            pitch_info: 'Free Parking, Free Internet and Free Breakfast.',
+            thumb: 'assets/img/camping/thumb/camping_4.jpg',
             price: 120
           },
           {
@@ -596,17 +596,17 @@ export let CAMPING = [
             active: 0,
             name: 'Grand Deluxe',
             beds: '1 king bed or 1 queen bed',
-            numb_available_rooms: 2,
+            numb_available_pitch: 2,
             refundable: 0,
-            room_info: 'Free Internet and Free Breakfast.',
-            thumb: 'assets/img/hotel/thumb/hotel_2.jpg',
+            pitch_info: 'Free Internet and Free Breakfast.',
+            thumb: 'assets/img/camping/thumb/camping_2.jpg',
             price: 180
           },
         ]
       },
       {
         id: 6,
-        name: 'Tijuquinha Plaza Hotel',
+        name: 'Camping Residence Villaggio San Michele',
         rating: 4.1,
         price: 65,
         sale_price: 45,
@@ -614,20 +614,20 @@ export let CAMPING = [
           lat: -23.000371,
           lon: -43.365895,
         },
-        address: 'Av Ayrton Senna, 877',
-        description: 'Family-friendly place in Rio de Janeiro, close to Botafogo Beach',
+        address: 'Litoranea, Peschici - Vieste, Km 9, 71019 Vieste FG',
+        description: 'Il Villaggio Camping è il luogo ideale per trascorrere le vacanze al mare in ampi spazi aperti, all’ombra di alberi di pino e di eucalipto, senza rinunciare al comfort e a servizi di qualità per tutta la famiglia.',
         // tslint:disable-next-line: max-line-length
-        location_text: 'This family-friendly Rio de Janeiro hotel is located in the business district, within 1 mi of Botafogo Beach, near of Arts Museum and Christ Redeemer. Leblon shop center and Botafogo Beach are close to 2 mi. ',
+        location_text: 'Situato a Vieste, a pochi metri dalla spiaggia del Pizzomunno, la principale del paese, a circa a 1500 metri dal centro, raggiungibile a piedi con una passeggiata sul suggestivo lungomare.',
         // tslint:disable-next-line: max-line-length
-        features: 'Along with A lot of restaurants and businnes conference room, this hotel has a full-service spa and an outdoor pool. Free WiFi in public areas and free valet parking are also provided. Other amenities include a nightclub, a health club, and a bar/lounge. ',
+        features: 'Terreno sabbioso ed erboso, direttamente sul mare con spiaggia libera gratuita e a 100 mt  spiaggia attrezzata a pagamento e parco giochi',
         // tslint:disable-next-line: max-line-length
-        room_amenities: 'All 250 rooms feature thoughtful touches like bathrobes and slippers, plus free WiFi, free wired Internet, and LCD TVs with satellite channels. Guests will also find sitting areas, 24-hour room service, and minibars. ',
-        thumb: 'assets/img/hotel/thumb/hotel_6.jpg',
+        pitch_services: 'Ogni piazzola in questo campeggio dispone di copertura wifi e di un bagno personale. Per il vostro confort, troverete al loro interno asciugacapelli. ',
+        thumb: 'assets/img/camping/thumb/camping_6.jpg',
         images: [
-          'assets/img/hotel/thumb/hotel_6.jpg',
-          'assets/img/hotel/thumb/hotel_4.jpg',
-          'assets/img/hotel/thumb/hotel_5.jpg',
-          'assets/img/hotel/thumb/hotel_10.jpg'
+          'assets/img/camping/thumb/camping_6.jpg',
+          'assets/img/camping/thumb/camping_4.jpg',
+          'assets/img/camping/thumb/camping_5.jpg',
+          'assets/img/camping/thumb/camping_10.jpg'
         ],
         free_wifi: 1,
         services: [
@@ -662,23 +662,23 @@ export let CAMPING = [
             name: 'Beach'
           }
         ],
-        numb_available_rooms: 12,
+        numb_available_pitch: 12,
         reviews: [
           {
             id: 1,
-            username: 'Oliver Bishop',
-            from: 'Chesterfield, UK',
-            title: 'Nice place, as long as you don t want to leave',
+            username: 'Mario Biondi',
+            from: 'Chieti',
+            title: 'Bel posto',
             // tslint:disable-next-line: max-line-length
-            content: 'The hotel staff were very helpful in all ways, nothing was too much trouble. The bar had a fantastic happy hour being good nibbles and great value. One of my best hotels.',
+            content: 'Lo staff del campeggio è stato molto disponibile per ogni evenienza, noessun problema. Il bar dispone di prodotti di qualità ad un ottimo prezzo. Uno dei migliori campeggi.',
             rating: 4
           },
           {
             id: 2,
-            username: ' Alejandro Suarez',
-            from: 'Bogotá, CO',
-            title: 'Close to old quarter',
-            content: '4 nights. Nice suite Staff very helpful. Easy to get cabs',
+            username: '',
+            from: 'Roma',
+            title: 'Contento',
+            content: '4 notti. Staff molto efficiente. Facile da reperire.',
             rating: 4
           },
           {
@@ -687,29 +687,29 @@ export let CAMPING = [
             from: 'Cincinnati, US',
             title: 'Short stay',
             // tslint:disable-next-line: max-line-length
-            content: 'Hotel reception staff speak limited English and not so friendly. Access to nearby food & beverage outside the hotel is not convenient.',
+            content: 'Camping reception staff speak limited English and not so friendly. Access to nearby food & beverage outside the hotel is not convenient.',
             rating: 3
           },
           {
             id: 4,
-            username: 'Jorge Silva',
-            from: 'São Paulo, BR',
-            title: 'Disappointing and overpriced',
+            username: 'Giorgia Neri',
+            from: 'Milano',
+            title: 'Scontenta e costoso',
             // tslint:disable-next-line: max-line-length
-            content: 'Disappointing stay as the condition of the hotel was the exact opposite of last hotel. The pool and fitness area looked alrite, but the staff was helpful.',
+            content: 'Non sono daccord con le condizioni di questo campeggio che sono l opposto rispetto all ultimo campeggio che ho visitato, ma lo staff è stato cordiale.',
             rating: 2
           }
         ],
-        rooms: [
+        pitches: [
           {
             id: 1,
             active: 1,
-            name: 'Deluxe Room',
+            name: 'Deluxe pitch',
             beds: '1 king bed or 1 twin bed',
-            numb_available_rooms: 1,
+            numb_available_pitch: 1,
             refundable: 0,
-            room_info: 'Free Parking, Free Internet and Free Breakfast.',
-            thumb: 'assets/img/hotel/thumb/hotel_4.jpg',
+            pitch_info: 'Free Parking, Free Internet and Free Breakfast.',
+            thumb: 'assets/img/camping/thumb/camping_4.jpg',
             price: 120
           },
           {
@@ -717,17 +717,17 @@ export let CAMPING = [
             active: 0,
             name: 'Grand Deluxe',
             beds: '1 king bed or 1 queen bed',
-            numb_available_rooms: 2,
+            numb_available_pitch: 2,
             refundable: 0,
-            room_info: 'Free Internet and Free Breakfast.',
-            thumb: 'assets/img/hotel/thumb/hotel_2.jpg',
+            pitch_info: 'Free Internet and Free Breakfast.',
+            thumb: 'assets/img/camping/thumb/camping_2.jpg',
             price: 180
           },
         ]
       },
       {
         id: 7,
-        name: 'Pousada Maresias',
+        name: 'Camping Villaggio Lamaforca',
         rating: 4.0,
         price: 100,
         sale_price: 70,
@@ -735,20 +735,20 @@ export let CAMPING = [
           lat: -23.791402,
           lon: -45.567807,
         },
-        address: 'Alameda Água Branca, 123',
-        description: 'Family-friendly place in Rio de Janeiro, close to Copacabana Beach',
+        address: 'SS 379 Bari Brindisi Km 25 uscita Ostuni-Torre Pozzella-Lamaforca, 72012 Carovigno BR',
+        description: 'Il Villaggio Camping è il luogo ideale per trascorrere le vacanze al mare in ampi spazi aperti, all’ombra di alberi di pino e di eucalipto, senza rinunciare al comfort e a servizi di qualità per tutta la famiglia.',
         // tslint:disable-next-line: max-line-length
-        location_text: 'This family-friendly Rio de Janeiro hotel is located in the business district, within 1 mi of Copacabana Beach, near of Arts Museum and Christ Redeemer. Leblon shop center and Botafogo Beach are close to 2 mi. ',
+        location_text: 'Situato a Carovigno, a pochi metri dalla spiaggia del Pizzomunno, la principale del paese, a circa a 1500 metri dal centro, raggiungibile a piedi con una passeggiata sul suggestivo lungomare.',
         // tslint:disable-next-line: max-line-length
-        features: 'Along with A lot of restaurants and businnes conference room, this hotel has a full-service spa and an outdoor pool. Free WiFi in public areas and free valet parking are also provided. Other amenities include a nightclub, a health club, and a bar/lounge. ',
+        features: 'Terreno sabbioso ed erboso, direttamente sul mare con spiaggia libera gratuita e a 100 mt  spiaggia attrezzata a pagamento e parco giochi',
         // tslint:disable-next-line: max-line-length
-        room_amenities: 'All 250 rooms feature thoughtful touches like bathrobes and slippers, plus free WiFi, free wired Internet, and LCD TVs with satellite channels. Guests will also find sitting areas, 24-hour room service, and minibars. ',
-        thumb: 'assets/img/hotel/thumb/hotel_7.jpg',
+        pitch_services: 'Ogni piazzola in questo campeggio dispone di copertura wifi e di un bagno personale. Per il vostro confort, troverete al loro interno asciugacapelli. ',
+        thumb: 'assets/img/camping/thumb/camping_7.jpg',
         images: [
-          'assets/img/hotel/thumb/hotel_7.jpg',
-          'assets/img/hotel/thumb/hotel_8.jpg',
-          'assets/img/hotel/thumb/hotel_10.jpg',
-          'assets/img/hotel/thumb/hotel_9.jpg'
+          'assets/img/camping/thumb/camping_7.jpg',
+          'assets/img/camping/thumb/camping_8.jpg',
+          'assets/img/camping/thumb/camping_10.jpg',
+          'assets/img/camping/thumb/camping_9.jpg'
         ],
         free_wifi: 1,
         services: [
@@ -783,23 +783,23 @@ export let CAMPING = [
             name: 'Beach'
           }
         ],
-        numb_available_rooms: 6,
+        numb_available_pitch: 6,
         reviews: [
           {
             id: 1,
-            username: 'Oliver Bishop',
-            from: 'Chesterfield, UK',
-            title: 'Nice place, as long as you don t want to leave',
+            username: 'Mario Biondi',
+            from: 'Chieti',
+            title: 'Bel posto',
             // tslint:disable-next-line: max-line-length
-            content: 'The hotel staff were very helpful in all ways, nothing was too much trouble. The bar had a fantastic happy hour being good nibbles and great value. One of my best hotels.',
+            content: 'Lo staff del campeggio è stato molto disponibile per ogni evenienza, noessun problema. Il bar dispone di prodotti di qualità ad un ottimo prezzo. Uno dei migliori campeggi.',
             rating: 4
           },
           {
             id: 2,
-            username: ' Alejandro Suarez',
-            from: 'Bogotá, CO',
-            title: 'Close to old quarter',
-            content: '4 nights. Nice suite Staff very helpful. Easy to get cabs',
+            username: '',
+            from: 'Roma',
+            title: 'Contento',
+            content: '4 notti. Staff molto efficiente. Facile da reperire.',
             rating: 4
           },
           {
@@ -808,29 +808,29 @@ export let CAMPING = [
             from: 'Cincinnati, US',
             title: 'Short stay',
             // tslint:disable-next-line: max-line-length
-            content: 'Hotel reception staff speak limited English and not so friendly. Access to nearby food & beverage outside the hotel is not convenient.',
+            content: 'Camping reception staff speak limited English and not so friendly. Access to nearby food & beverage outside the hotel is not convenient.',
             rating: 3
           },
           {
             id: 4,
-            username: 'Jorge Silva',
-            from: 'São Paulo, BR',
-            title: 'Disappointing and overpriced',
+            username: 'Giorgia Neri',
+            from: 'Milano',
+            title: 'Scontenta e costoso',
             // tslint:disable-next-line: max-line-length
-            content: 'Disappointing stay as the condition of the hotel was the exact opposite of last hotel. The pool and fitness area looked alrite, but the staff was helpful.',
+            content: 'Non sono daccord con le condizioni di questo campeggio che sono l opposto rispetto all ultimo campeggio che ho visitato, ma lo staff è stato cordiale.',
             rating: 2
           }
         ],
-        rooms: [
+        pitches: [
           {
             id: 1,
             active: 1,
-            name: 'Deluxe Room',
+            name: 'Deluxe pitch',
             beds: '1 king bed or 1 twin bed',
-            numb_available_rooms: 1,
+            numb_available_pitch: 1,
             refundable: 0,
-            room_info: 'Free Parking, Free Internet and Free Breakfast.',
-            thumb: 'assets/img/hotel/thumb/hotel_4.jpg',
+            pitch_info: 'Free Parking, Free Internet and Free Breakfast.',
+            thumb: 'assets/img/camping/thumb/camping_4.jpg',
             price: 120
           },
           {
@@ -838,17 +838,17 @@ export let CAMPING = [
             active: 0,
             name: 'Grand Deluxe',
             beds: '1 king bed or 1 queen bed',
-            numb_available_rooms: 2,
+            numb_available_pitch: 2,
             refundable: 0,
-            room_info: 'Free Internet and Free Breakfast.',
-            thumb: 'assets/img/hotel/thumb/hotel_2.jpg',
+            pitch_info: 'Free Internet and Free Breakfast.',
+            thumb: 'assets/img/camping/thumb/camping_2.jpg',
             price: 180
           },
         ]
       },
       {
         id: 8,
-        name: 'Solar Beach Hotel',
+        name: 'Uria Camping & Village',
         rating: 4.1,
         price: 90,
         sale_price: 80,
@@ -856,20 +856,20 @@ export let CAMPING = [
           lat: -9.010380,
           lon: -35.220805,
         },
-        address: 'Rua Jangadeiros',
-        description: 'Family-friendly place in Rio de Janeiro, close to Copacabana Beach',
+        address: 'Isola Varano, 71010 Foce Varano FG',
+        description: 'Il Villaggio Camping è il luogo ideale per trascorrere le vacanze al mare in ampi spazi aperti, all’ombra di alberi di pino e di eucalipto, senza rinunciare al comfort e a servizi di qualità per tutta la famiglia.',
         // tslint:disable-next-line: max-line-length
-        location_text: 'This family-friendly Rio de Janeiro hotel is located in the business district, within 1 mi of Copacabana Beach, near of Arts Museum and Christ Redeemer. Leblon shop center and Botafogo Beach are close to 2 mi. ',
+        location_text: 'Situato a Foce Varano, a pochi metri dalla spiaggia del Pizzomunno, la principale del paese, a circa a 1500 metri dal centro, raggiungibile a piedi con una passeggiata sul suggestivo lungomare.',
         // tslint:disable-next-line: max-line-length
-        features: 'Along with A lot of restaurants and businnes conference room, this hotel has a full-service spa and an outdoor pool. Free WiFi in public areas and free valet parking are also provided. Other amenities include a nightclub, a health club, and a bar/lounge. ',
+        features: 'Terreno sabbioso ed erboso, direttamente sul mare con spiaggia libera gratuita e a 100 mt  spiaggia attrezzata a pagamento e parco giochi',
         // tslint:disable-next-line: max-line-length
-        room_amenities: 'All 250 rooms feature thoughtful touches like bathrobes and slippers, plus free WiFi, free wired Internet, and LCD TVs with satellite channels. Guests will also find sitting areas, 24-hour room service, and minibars. ',
-        thumb: 'assets/img/hotel/thumb/hotel_8.jpg',
+        pitch_services: 'Ogni piazzola in questo campeggio dispone di copertura wifi e di un bagno personale. Per il vostro confort, troverete al loro interno asciugacapelli. ',
+        thumb: 'assets/img/camping/thumb/camping_8.jpg',
         images: [
-          'assets/img/hotel/thumb/hotel_8.jpg',
-          'assets/img/hotel/thumb/hotel_9.jpg',
-          'assets/img/hotel/thumb/hotel_5.jpg',
-          'assets/img/hotel/thumb/hotel_6.jpg'
+          'assets/img/camping/thumb/camping_8.jpg',
+          'assets/img/camping/thumb/camping_9.jpg',
+          'assets/img/camping/thumb/camping_5.jpg',
+          'assets/img/camping/thumb/camping_6.jpg'
         ],
         free_wifi: 1,
         services: [
@@ -904,23 +904,23 @@ export let CAMPING = [
             name: 'Beach'
           }
         ],
-        numb_available_rooms: 12,
+        numb_available_pitch: 12,
         reviews: [
           {
             id: 1,
-            username: 'Oliver Bishop',
-            from: 'Chesterfield, UK',
-            title: 'Nice place, as long as you don t want to leave',
+            username: 'Mario Biondi',
+            from: 'Chieti',
+            title: 'Bel posto',
             // tslint:disable-next-line: max-line-length
-            content: 'The hotel staff were very helpful in all ways, nothing was too much trouble. The bar had a fantastic happy hour being good nibbles and great value. One of my best hotels.',
+            content: 'Lo staff del campeggio è stato molto disponibile per ogni evenienza, noessun problema. Il bar dispone di prodotti di qualità ad un ottimo prezzo. Uno dei migliori campeggi.',
             rating: 4
           },
           {
             id: 2,
-            username: ' Alejandro Suarez',
-            from: 'Bogotá, CO',
-            title: 'Close to old quarter',
-            content: '4 nights. Nice suite Staff very helpful. Easy to get cabs',
+            username: '',
+            from: 'Roma',
+            title: 'Contento',
+            content: '4 notti. Staff molto efficiente. Facile da reperire.',
             rating: 4
           },
           {
@@ -929,29 +929,29 @@ export let CAMPING = [
             from: 'Cincinnati, US',
             title: 'Short stay',
             // tslint:disable-next-line: max-line-length
-            content: 'Hotel reception staff speak limited English and not so friendly. Access to nearby food & beverage outside the hotel is not convenient.',
+            content: 'Camping reception staff speak limited English and not so friendly. Access to nearby food & beverage outside the hotel is not convenient.',
             rating: 3
           },
           {
             id: 4,
-            username: 'Jorge Silva',
-            from: 'São Paulo, BR',
-            title: 'Disappointing and overpriced',
+            username: 'Giorgia Neri',
+            from: 'Milano',
+            title: 'Scontenta e costoso',
             // tslint:disable-next-line: max-line-length
-            content: 'Disappointing stay as the condition of the hotel was the exact opposite of last hotel. The pool and fitness area looked alrite, but the staff was helpful.',
+            content: 'Non sono daccord con le condizioni di questo campeggio che sono l opposto rispetto all ultimo campeggio che ho visitato, ma lo staff è stato cordiale.',
             rating: 2
           }
         ],
-        rooms: [
+        pitches: [
           {
             id: 1,
             active: 1,
-            name: 'Deluxe Room',
+            name: 'Deluxe pitch',
             beds: '1 king bed or 1 twin bed',
-            numb_available_rooms: 1,
+            numb_available_pitch: 1,
             refundable: 0,
-            room_info: 'Free Parking, Free Internet and Free Breakfast.',
-            thumb: 'assets/img/hotel/thumb/hotel_4.jpg',
+            pitch_info: 'Free Parking, Free Internet and Free Breakfast.',
+            thumb: 'assets/img/camping/thumb/camping_4.jpg',
             price: 120
           },
           {
@@ -959,10 +959,10 @@ export let CAMPING = [
             active: 0,
             name: 'Grand Deluxe',
             beds: '1 king bed or 1 queen bed',
-            numb_available_rooms: 2,
+            numb_available_pitch: 2,
             refundable: 0,
-            room_info: 'Free Internet and Free Breakfast.',
-            thumb: 'assets/img/hotel/thumb/hotel_2.jpg',
+            pitch_info: 'Free Internet and Free Breakfast.',
+            thumb: 'assets/img/camping/thumb/camping_2.jpg',
             price: 180
           },
         ]

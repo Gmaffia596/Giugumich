@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
         private statusBar: StatusBar,
         private translate: TranslateProvider,
         private translateService: TranslateService,
-        public navCtrl: NavController
+        public navCtrl: NavController,
     ) {
         this.appPages = [
             {
@@ -40,43 +40,37 @@ export class AppComponent implements OnInit {
                 icon: 'home'
             },
             {
-                title: 'Booking List',
+                title: 'Lista Prenotazioni',
                 url: '/booking-list',
                 direct: 'forward',
                 icon: 'book'
             },
             {
-                title: 'Favorites',
+                title: 'Preferiti',
                 url: '/favorites',
                 direct: 'forward',
                 icon: 'heart'
             },
             {
-                title: 'Rent a Camper',
+                title: 'Noleggia un Camper',
                 url: '/rentcamper',
                 direct: 'forward',
                 icon: 'car'
             },
             {
-                title: 'Trip Activities',
+                title: 'Attività',
                 url: '/activities',
                 direct: 'forward',
                 icon: 'beer'
             },
             {
-                title: 'Local Weather',
+                title: 'Meteo Locale',
                 url: '/local-weather',
                 direct: 'forward',
                 icon: 'partly-sunny'
             },
             {
-                title: 'Chatbot',
-                url: '/chatbot',
-                direct: 'forward',
-                icon: 'chatbubbles'
-            },
-            {
-                title: 'Settings',
+                title: 'Impostazioni',
                 url: '/settings',
                 direct: 'forward',
                 icon: 'settings'
@@ -88,7 +82,7 @@ export class AppComponent implements OnInit {
                 icon: 'information-circle-outline'
             },
             {
-                title: 'Support',
+                title: 'Supporto',
                 url: '/support',
                 direct: 'forward',
                 icon: 'help-buoy'
@@ -99,9 +93,9 @@ export class AppComponent implements OnInit {
     }
 
     initializeApp() {
-
+        
       this.platform.ready().then(() => {
-          this.statusBar.styleDefault();
+          this.statusBar.hide();
           setTimeout(() => {
               this.splashScreen.hide();
           }, 1000);

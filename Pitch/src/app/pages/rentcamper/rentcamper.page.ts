@@ -13,8 +13,8 @@ import { LocationPage } from './../modal/location/location.page';
 export class RentcamperPage implements OnInit {
   toppings: any;
   search: any = {
-    pickup: 'Rio de Janeiro, Brazil',
-    dropOff: 'Same as pickup',
+    pickup: 'Luogo del noleggio',
+    dropOff: 'Luogo di rilascio',
     from: new Date().toISOString(),
     to: new Date().toISOString()
   };
@@ -29,7 +29,7 @@ export class RentcamperPage implements OnInit {
     this.storage.get('pickup').then((val) => {
       // console.log(val)
       if (val === null) {
-        this.search.pickup = 'Rio de Janeiro, Brazil';
+        this.search.pickup = 'Luogo del noleggio';
       } else {
         this.search.pickup = val;
       }
@@ -41,7 +41,7 @@ export class RentcamperPage implements OnInit {
 
     this.storage.get('dropOff').then((val) => {
       if (val === null) {
-        this.search.dropOff = 'Same as pickup';
+        this.search.dropOff = 'Luogo di rilascio';
       } else {
         this.search.dropOff = val;
       }
